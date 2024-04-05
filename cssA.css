@@ -1,7 +1,9 @@
 /* Hamburger Menu Icon */
 .hamburger-menu {
-    display: none; /* Hidden by default, shown in media query below */
-    cursor: pointer;
+    position: fixed; /* Or absolute, depending on layout */
+    top: 10px; /* Adjust as necessary */
+    right: 20px; /* Adjust as necessary */
+    z-index: 1100; /* Ensure it's above other content */
 }
 
 .hamburger-icon {
@@ -34,24 +36,19 @@
 
 /* Style adjustments for smaller screens */
 @media (max-width: 768px) {
-    .hamburger-menu {
-        display: block; /* Show hamburger icon */
+    .header {
+        padding: 5px 10px; /* Reduced padding */
     }
-
-    .nav-container {
-        display: none; /* Hide navigation links initially */
+    .header__logo img {
+        width: 50px; /* Adjust the logo size for small screens */
+        height: auto;
     }
-
-    .nav__link {
-        display: block; /* Stack links vertically */
-        margin: 10px 0; /* Add some vertical spacing */
-    }
-
-    /* Additional styling for open menu state */
-    .nav-container.active {
-        display: block; /* Show navigation links when active */
+    .header__logo {
+        font-size: 20px; /* If you're using text for the logo, adjust its size */
     }
 }
+
+
 
 
 /* Global Styles */
