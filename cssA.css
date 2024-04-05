@@ -438,6 +438,26 @@ color: #13354b;
   height: auto; /* Aspect ratio maintenance */
 }
 
+.cookie-consent-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f4e9e2;
+    padding: 20px;
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+.cookie-image {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.cookie-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
 @keyframes blink-animation {
   to {
       visibility: hidden;
@@ -449,3 +469,4 @@ color: #13354b;
       visibility: hidden;
   }
 }
+
