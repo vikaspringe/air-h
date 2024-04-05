@@ -1,6 +1,7 @@
 @media (max-width: 600px) {
     body {
-        font-size: 14px; /* Adjust the base font size for mobile */
+        padding-bottom: 50px; /* Adds more space at the bottom */
+        font-size: 13px; /* Adjust the base font size for mobile */
     }
 
     h1, h2, h3, h4, h5, h6 {
