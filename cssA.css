@@ -31,7 +31,14 @@
         background-size: cover; /* Ensure the background image covers the banner area */
         background-position: center; /* Center the background image */
     }
-
+    .banner__content {
+        position: absolute;
+        top: 80%; /* Move towards the bottom */
+        left: 50%;
+        transform: translate(-50%, -50%); /* Adjust this if needed */
+        padding: 20px;
+        width: 90%;
+    }
     .banner__content h1 {
         font-size: 16px; /* Smaller font size for the main heading */
         margin-bottom: 8px; /* Reduced spacing */
