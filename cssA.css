@@ -1,175 +1,12 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-img {
-  max-width: 100%;
-  height: auto; /* Keeps the aspect ratio intact */
-}
-
-/* For devices larger than 768px */
-@media (min-width: 768px) {
-  .sidebar {
-    width: 25%;
-  }
-  .main-content {
-    width: 75%;
-  }
-}
-
-/* For devices smaller than 768px */
-@media (max-width: 768px) {
-  .sidebar,
-  .main-content {
-    width: 100%;
-  }
-}
-
-
-.hamburger-menu {
-    display: none; /* Hidden on larger screens by default */
-    position: fixed; /* Fixed position to make it always visible */
-    top: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    z-index: 2000; /* Ensure a high z-index to stay on top */
-    cursor: pointer;
-}
-
-.nav__link {
-    font-family: 'Montserrat', sans-serif; /* Example font */
-    font-size: 1rem; /* Adjust base font size as necessary */
-    font-weight: 400; /* Normal weight */
-    letter-spacing: 0.05em; /* Adjust as needed */
-    text-decoration: none;
-    color: #000; /* Example color */
-    padding: 10px; /* Provides space around the links */
-    margin-right: 20px; /* Space between links */
-}
-
-.nav__link:last-child {
-    margin-right: 0; /* Removes margin from the last link */
-}
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* or 'space-between' for equal spacing */
-}
-.nav__link {
-    box-sizing: border-box;
-    /* Other styles */
-}
-
-
-/* Global Styles */
-body, h1, h2, h3, h4, h5, h6, .nav__link, .box, .footer__info, .footer__social li a {
-  transition: all 0.3s ease; /* Smooth transition for all changes */
-}
-
-@media (max-width: 768px) {
-    .hamburger-menu {
-        display: block; /* Show the hamburger menu on smaller screens */
-        /* Additional styling for positioning and appearance */
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-.nav {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9); /* Example overlay background */
-    flex-direction: column;
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    z-index: 1500; /* Below the hamburger menu but above other content */
-}
-
-.nav.active {
-    display: flex; /* Show as flexbox when active */
-}
-
-    .nav__link {
-        text-align: center; /* Center-align links for the vertical menu */
-        font-size: 0.9rem; /* Slightly smaller font size on small devices */
-        padding: 10px 0; /* Add some padding for tap targets */
-        border-bottom: 1px solid #eee; /* Optional: adds a separator between links */
-        /* Ensure links are block-level to fill the container */
-        display: block;
-    }
-}
-
-  .box {
-    width: 90%; /* Make boxes take more width */
-    margin: 20px auto; /* Center boxes */
-    height: auto; /* Adjust height dynamically */
-    line-height: normal; /* Reset line height */
-    padding: 20px; /* Add padding */
-  }
-
-  .boxes {
-    margin-top: 80px; /* Increase spacing from the header */
-  }
-
-  .footer__inner {
-    flex-direction: column; /* Stack footer content */
-    align-items: center; /* Center align the content */
-  }
-
-  .footer__logo img, .footer__social img {
-    width: 50px; /* Reduce the size of footer images */
-  }
-
-  .footer__info, .footer__social ul {
-    text-align: center; /* Center-align footer text and social links */
-  }
-
-  .footer__social li {
-    margin: 0 5px; /* Adjust margin between social icons */
-  }
-
-  .whatsapp-blinking-logo img {
-    width: 60px; /* Reduce WhatsApp logo size for small screens */
-  }
-}
-
-/* Further adjustments for very small screens */
-@media (max-width: 480px) {
-  .header__logo {
-    font-size: 24px; /* Reduce logo font size */
-  }
-
-  .nav__link {
-    font-size: 14px; /* Reduce navigation link font size */
-  }
-  
-  .contact-section h1, .contact-info, .contact-info h1 {
-    font-size: 16px; /* Reduce font size for contact section */
-  }
-}
-
-
-
-
 body {
-  font-size: 1rem; /* Base font size */
   margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.banner {
-  height: 100vh; /* Full viewport height */
-}
+  font-family: 'Montserrat', sans-serif;
 
+  font-size: 15px;
+  
+  color: #333;
+  overflow-y: scroll;
+}
 
 body.loading {
   overflow-y: hidden;
@@ -190,10 +27,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /*Container*/
 .container {
-  width: 80%;
-  margin: auto; /* Centers the container */
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-
 
 /*Header*/
 .header {
@@ -605,20 +442,21 @@ color: #13354b;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #ff6347;
+    background-color: #e2e2f4;
     padding: 20px;
     text-align: center;
     display: none; /* Hidden by default */
 }
 
 .cookie-image {
-    width: 100px;
+    width: 50px;
     height: auto;
+    background: transparent;
     margin-bottom: 10px;
 }
 
 .cookie-buttons button {
-    margin: 20px;
+    margin: 10px;
     padding: 10px 20px;
 }
 
