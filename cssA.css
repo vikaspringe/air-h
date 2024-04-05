@@ -319,7 +319,7 @@ color: #13354b;
 .company-logo {
   width: 160px; /* Adjust width as needed */
   height: 100px; /* Adjust height as needed */
-  background-color: #f0f0f0; /* Background color of the rectangle */
+  background-color: #fffff; /* Background color of the rectangle */
   border-radius: 10px; /* Rounded corners */
   display: flex;
   justify-content: center;
