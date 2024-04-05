@@ -1,41 +1,40 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Hamburger menu toggle
-    var hamburger = document.querySelector('.hamburger-menu');
-    var navContainer = document.getElementById('navContainer');
-    if (hamburger && navContainer) {
-        hamburger.addEventListener('click', function() {
-            navContainer.classList.toggle('active');
-        });
-    }
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll("a");
 
-    // Link loading effect
-    const links = document.querySelectorAll("a");
-    links.forEach(link => {
-        link.addEventListener("click", function() {
-            document.body.classList.add("loading");
-        });
+  links.forEach(link => {
+    link.addEventListener("click", function() {
+      document.body.classList.add("loading");
     });
+  });
 
-    // Display cookie consent banner every time
+  window.addEventListener("load", function() {
+    document.body.classList.remove("loading");
+  });
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Always display the cookie consent banner, ignoring previous consent
     document.getElementById('cookieConsent').style.display = 'block';
 });
 
-window.addEventListener("load", function() {
-    document.body.classList.remove("loading");
-});
-
 function setCookiePreferences(choice) {
-    // Logic for handling cookie preferences
     if (choice === "reject") {
+        // Example: Clear certain cookies here if needed
         console.log("Cookies rejected. Only essential cookies will be used.");
-        window.location.href = '/goodbye.html'; // Adjust the path as necessary
+        // Redirect users to the goodbye page if they reject cookies
+        window.location.href = '/goodbye.html'; // Make sure to adjust the path as necessary
     } else {
+        // If cookies are accepted or mandatory, you might still want to store this choice
+        // Or perform actions based on acceptance, but without setting a long-term cookie
         console.log("Cookie preference accepted: " + choice);
+        // Here, you would not set the 'userConsent' cookie to remember the choice
     }
+    // Always hide the cookie consent banner after making a choice
     document.getElementById('cookieConsent').style.display = 'none';
 }
 
-// Functions to set and get cookies, no changes needed here
+
+
 function setCookie(name, value, days) {
     var expires = "";
     if (days) {
