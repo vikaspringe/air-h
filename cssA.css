@@ -1,3 +1,28 @@
+.nav__link {
+    font-family: 'Montserrat', sans-serif; /* Example font */
+    font-size: 16px; /* Example size */
+    font-weight: 400; /* Normal weight */
+    letter-spacing: 0.05em; /* Adjust as needed */
+    text-decoration: none;
+    color: #000; /* Example color */
+    padding: 10px; /* Provides space around the links */
+    margin-right: 20px; /* Space between links */
+}
+
+.nav__link:last-child {
+    margin-right: 0; /* Removes margin from the last link */
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* or 'space-between' for equal spacing */
+}
+.nav__link {
+    box-sizing: border-box;
+    /* Other styles */
+}
+
+
 /* Global Styles */
 body, h1, h2, h3, h4, h5, h6, .nav__link, .box, .footer__info, .footer__social li a {
   transition: all 0.3s ease; /* Smooth transition for all changes */
