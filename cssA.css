@@ -23,6 +23,26 @@
     .boxes .box {
         font-size: 12px !important;
     }
+
+    /* Adjustments for the banner on mobile devices */
+    .banner {
+        height: 200px; /* Smaller height for mobile devices */
+        background-size: cover; /* Ensure the background image covers the banner area */
+        background-position: center; /* Center the background image */
+    }
+
+    .banner__content h1 {
+        font-size: 24px; /* Smaller font size for the main heading */
+        margin-bottom: 8px; /* Reduced spacing */
+    }
+
+    .banner__content p {
+        font-size: 14px; /* Smaller font size for the paragraph */
+    }
+
+    .banner__content {
+        padding: 20px; /* Adjust padding for mobile devices */
+    }
 }
 
 
