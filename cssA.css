@@ -11,19 +11,20 @@
         font-size: 13px; /* Smaller font sizes for navigation, footer, and contact info */
     }
 
-    .box, .banner__content h1, .banner__content p {
-        font-size: 12px; /* Adjust box content and banner text for better readability */
+    .box, .banner__content h1, .banner__content p, .boxes .box {
+        font-size: 12px; /* Adjust box content, banner text, and box titles for better readability */
     }
 
     .cookie-consent-container, .cookie-buttons button {
         font-size: 12px; /* Ensure cookie consent and buttons are also adjusted */
     }
-}
-@media (max-width: 600px) {
-    .box {
-        font-size: 7px; /* Adjust the font size for the box titles on mobile */
+    
+    /* Specifically for .box within .boxes to increase specificity */
+    .boxes .box {
+        font-size: 12px !important;
     }
 }
+
 
 
 body {
