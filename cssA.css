@@ -449,7 +449,9 @@ color: #13354b;
 }
 
 .cookie-image {
-    width: 100px;
+    width: 20px;
+    height: auto;
+    background: transparent;
     margin-bottom: 10px;
 }
 
