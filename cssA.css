@@ -1,6 +1,10 @@
-/* Hide the hamburger menu on larger screens and display it on smaller screens */
 .hamburger-menu {
     display: none; /* Hidden on larger screens by default */
+    position: fixed; /* Fixed position to make it always visible */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 2000; /* Ensure a high z-index to stay on top */
+    cursor: pointer;
 }
 
 .nav__link {
@@ -44,16 +48,23 @@ body, h1, h2, h3, h4, h5, h6, .nav__link, .box, .footer__info, .footer__social l
         z-index: 100;
     }
 
-    .nav {
-        display: none; /* Initially hide the navigation menu on smaller screens */
-        flex-direction: column;
-        width: 100%; /* Take full width of its container */
-        /* Adjust styling as needed for background, spacing, etc. */
-    }
+.nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9); /* Example overlay background */
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    z-index: 1500; /* Below the hamburger menu but above other content */
+}
 
-    .nav.active {
-        display: flex; /* Display the menu when it is active (hamburger menu clicked) */
-    }
+.nav.active {
+    display: flex; /* Show as flexbox when active */
+}
 
     .nav__link {
         text-align: center; /* Center-align links for the vertical menu */
