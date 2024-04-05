@@ -19,6 +19,11 @@
         font-size: 12px; /* Ensure cookie consent and buttons are also adjusted */
     }
 }
+@media (max-width: 600px) {
+    .box {
+        font-size: 12px; /* Adjust the font size for the box titles on mobile */
+    }
+}
 
 
 body {
