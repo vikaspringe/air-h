@@ -21,7 +21,7 @@
 }
 @media (max-width: 600px) {
     .box {
-        font-size: 12px; /* Adjust the font size for the box titles on mobile */
+        font-size: 7px; /* Adjust the font size for the box titles on mobile */
     }
 }
 
