@@ -1,3 +1,8 @@
+/* Hide the hamburger menu on larger screens and display it on smaller screens */
+.hamburger-menu {
+    display: none; /* Hidden on larger screens by default */
+}
+
 .nav__link {
     font-family: 'Montserrat', sans-serif; /* Example font */
     font-size: 16px; /* Example size */
@@ -28,29 +33,34 @@ body, h1, h2, h3, h4, h5, h6, .nav__link, .box, .footer__info, .footer__social l
   transition: all 0.3s ease; /* Smooth transition for all changes */
 }
 
-/* Adjusting for mobile screens */
 @media (max-width: 768px) {
-    .nav-container {
-        display: none; /* Hide by default, shown when active */
-        width: 100%; /* Take up full width */
-        background-color: #fff; /* Or any color that matches your design */
-        box-shadow: 0 4px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for depth */
-        position: absolute; /* Positioning it directly within the viewport */
-        top: 100%; /* Directly below the header */
-        left: 0;
-        z-index: 1000; /* Ensure it's above other content */
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu on smaller screens */
+        /* Additional styling for positioning and appearance */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 100;
     }
-    
-    .nav-container.active {
-        display: block; /* Show when active */
+
+    .nav {
+        display: none; /* Initially hide the navigation menu on smaller screens */
+        flex-direction: column;
+        width: 100%; /* Take full width of its container */
+        /* Adjust styling as needed for background, spacing, etc. */
+    }
+
+    .nav.active {
+        display: flex; /* Display the menu when it is active (hamburger menu clicked) */
     }
 
     .nav__link {
-        display: block; /* Stack links vertically */
-        text-align: left; /* Align text to the left */
-        width: 100%; /* Each link takes full width */
-        padding: 10px; /* Add padding for touch targets */
+        text-align: center; /* Center-align links for the vertical menu */
+        padding: 10px 0; /* Add some padding for tap targets */
         border-bottom: 1px solid #eee; /* Optional: adds a separator between links */
+        /* Ensure links are block-level to fill the container */
+        display: block;
     }
 }
 
