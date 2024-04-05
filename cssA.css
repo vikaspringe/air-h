@@ -442,23 +442,49 @@ color: #13354b;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #e2e2f4;
+    background-color: #e2e2f4; /* Light blue background for contrast */
     padding: 20px;
     text-align: center;
-    display: none; /* Hidden by default */
+    font-family: 'Montserrat', sans-serif; /* Ensures font consistency */
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+    z-index: 1000; /* Ensures visibility above other elements */
 }
 
 .cookie-image {
     width: 50px;
-    height: auto;
-    background: transparent;
     margin-bottom: 10px;
 }
 
 .cookie-buttons button {
+    font-family: 'Montserrat', sans-serif; /* Consistent font */
     margin: 10px;
     padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background transition on hover */
 }
+
+/* Specific styles for different buttons for better UX */
+.cookie-buttons button[onclick*="mandatory"] {
+    background-color: #4CAF50; /* Green for confirmation actions */
+}
+
+.cookie-buttons button[onclick*="all"] {
+    background-color: #008CBA; /* Blue for a neutral option */
+}
+
+.cookie-buttons button[onclick*="reject"] {
+    background-color: #f44336; /* Red to indicate a negative option */
+}
+
+/* Hover effects for buttons */
+.cookie-buttons button:hover {
+    opacity: 0.9; /* Slight opacity change on hover */
+}
+
 
 @keyframes blink-animation {
   to {
