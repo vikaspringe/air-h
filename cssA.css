@@ -1,3 +1,80 @@
+/* Global Styles */
+body, h1, h2, h3, h4, h5, h6, .nav__link, .box, .footer__info, .footer__social li a {
+  transition: all 0.3s ease; /* Smooth transition for all changes */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 5px 20px; /* Reduce padding */
+  }
+
+  .header__inner {
+    flex-direction: column; /* Stack logo and navigation */
+  }
+
+  .nav {
+    margin-left: 0;
+    flex-direction: column; /* Stack navigation links */
+    align-items: center; /* Center navigation links */
+  }
+
+  .nav__link {
+    margin: 5px 0; /* Reduce margin around navigation links */
+  }
+
+  .box {
+    width: 90%; /* Make boxes take more width */
+    margin: 20px auto; /* Center boxes */
+    height: auto; /* Adjust height dynamically */
+    line-height: normal; /* Reset line height */
+    padding: 20px; /* Add padding */
+  }
+
+  .boxes {
+    margin-top: 80px; /* Increase spacing from the header */
+  }
+
+  .footer__inner {
+    flex-direction: column; /* Stack footer content */
+    align-items: center; /* Center align the content */
+  }
+
+  .footer__logo img, .footer__social img {
+    width: 50px; /* Reduce the size of footer images */
+  }
+
+  .footer__info, .footer__social ul {
+    text-align: center; /* Center-align footer text and social links */
+  }
+
+  .footer__social li {
+    margin: 0 5px; /* Adjust margin between social icons */
+  }
+
+  .whatsapp-blinking-logo img {
+    width: 60px; /* Reduce WhatsApp logo size for small screens */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .header__logo {
+    font-size: 24px; /* Reduce logo font size */
+  }
+
+  .nav__link {
+    font-size: 14px; /* Reduce navigation link font size */
+  }
+  
+  .contact-section h1, .contact-info, .contact-info h1 {
+    font-size: 16px; /* Reduce font size for contact section */
+  }
+}
+
+
+
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
