@@ -36,7 +36,7 @@ img {
 
 .nav__link {
     font-family: 'Montserrat', sans-serif; /* Example font */
-    font-size: 16px; /* Example size */
+    font-size: 1rem; /* Adjust base font size as necessary */
     font-weight: 400; /* Normal weight */
     letter-spacing: 0.05em; /* Adjust as needed */
     text-decoration: none;
@@ -95,6 +95,7 @@ body, h1, h2, h3, h4, h5, h6, .nav__link, .box, .footer__info, .footer__social l
 
     .nav__link {
         text-align: center; /* Center-align links for the vertical menu */
+        font-size: 0.9rem; /* Slightly smaller font size on small devices */
         padding: 10px 0; /* Add some padding for tap targets */
         border-bottom: 1px solid #eee; /* Optional: adds a separator between links */
         /* Ensure links are block-level to fill the container */
