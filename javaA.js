@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.querySelector('.hamburger-menu');
+    var navContainer = document.getElementById('navContainer');
+
+    hamburger.addEventListener('click', function() {
+        navContainer.classList.toggle('active');
+    });
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
   const links = document.querySelectorAll("a");
 
