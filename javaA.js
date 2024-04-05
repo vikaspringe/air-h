@@ -13,23 +13,26 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    let consent = getCookie("userConsent");
-    if (!consent) {
-        document.getElementById('cookieConsent').style.display = 'block';
-    }
+    // Always display the cookie consent banner, ignoring previous consent
+    document.getElementById('cookieConsent').style.display = 'block';
 });
 
 function setCookiePreferences(choice) {
     if (choice === "reject") {
         // Example: Clear certain cookies here if needed
         console.log("Cookies rejected. Only essential cookies will be used.");
-        // Redirect users to the goodbye page
+        // Redirect users to the goodbye page if they reject cookies
         window.location.href = '/goodbye.html'; // Make sure to adjust the path as necessary
-        return; // Stop further execution in case of reject to ensure immediate redirection
+    } else {
+        // If cookies are accepted or mandatory, you might still want to store this choice
+        // Or perform actions based on acceptance, but without setting a long-term cookie
+        console.log("Cookie preference accepted: " + choice);
+        // Here, you would not set the 'userConsent' cookie to remember the choice
     }
-    setCookie("userConsent", choice, 365); // Stores user consent for 365 days
+    // Always hide the cookie consent banner after making a choice
     document.getElementById('cookieConsent').style.display = 'none';
 }
+
 
 
 function setCookie(name, value, days) {
