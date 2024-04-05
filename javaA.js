@@ -22,13 +22,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 function setCookiePreferences(choice) {
     if (choice === "reject") {
         // Example: Clear certain cookies here if needed
-        alert("Cookies rejected. Only essential cookies will be used.");
-        // Redirect or take other actions as needed for rejection
-        // window.location.href = '/goodbye.html'; // Uncomment to redirect
+        console.log("Cookies rejected. Only essential cookies will be used.");
+        // Redirect users to the goodbye page
+        window.location.href = '/goodbye.html'; // Make sure to adjust the path as necessary
+        return; // Stop further execution in case of reject to ensure immediate redirection
     }
     setCookie("userConsent", choice, 365); // Stores user consent for 365 days
     document.getElementById('cookieConsent').style.display = 'none';
 }
+
 
 function setCookie(name, value, days) {
     var expires = "";
