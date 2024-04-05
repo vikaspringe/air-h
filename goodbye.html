@@ -37,12 +37,18 @@
             border-radius: 5px;
             margin-top: 20px;
         }
+        /* Adjust the image size */
+        .goodbye-image {
+            max-width: 50%; /* Change this value to adjust the size */
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Oh, Cookies!</h1>
-        <img src="goodbye.png" alt="Funny Cookie Image" style="max-width: 100%; height: auto;">
+        <!-- Add the class to the image for easier CSS management -->
+        <img src="goodbye.png" alt="Funny Cookie Image" class="goodbye-image">
         <p>It looks like we're parting ways over cookies - how crumbly! 🍪</p>
         <p>We're sad to see you go but hope you had a sprinkle of fun while you were here. Remember, our cookie jar is always open if you decide to come back for a taste of what we offer.</p>
         <p>In the meantime, here's a big <strong>"Auf Wiedersehen"</strong>, "See you later", and "Goodbye" from all of us. Stay sweet!</p>
