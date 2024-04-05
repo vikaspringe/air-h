@@ -3,25 +3,31 @@ body, h1, h2, h3, h4, h5, h6, .nav__link, .box, .footer__info, .footer__social l
   transition: all 0.3s ease; /* Smooth transition for all changes */
 }
 
-/* Responsive Styles */
+/* Adjusting for mobile screens */
 @media (max-width: 768px) {
-  .header {
-    padding: 5px 20px; /* Reduce padding */
-  }
+    .nav-container {
+        display: none; /* Hide by default, shown when active */
+        width: 100%; /* Take up full width */
+        background-color: #fff; /* Or any color that matches your design */
+        box-shadow: 0 4px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for depth */
+        position: absolute; /* Positioning it directly within the viewport */
+        top: 100%; /* Directly below the header */
+        left: 0;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+    
+    .nav-container.active {
+        display: block; /* Show when active */
+    }
 
-  .header__inner {
-    flex-direction: column; /* Stack logo and navigation */
-  }
-
-  .nav {
-    margin-left: 0;
-    flex-direction: column; /* Stack navigation links */
-    align-items: center; /* Center navigation links */
-  }
-
-  .nav__link {
-    margin: 5px 0; /* Reduce margin around navigation links */
-  }
+    .nav__link {
+        display: block; /* Stack links vertically */
+        text-align: left; /* Align text to the left */
+        width: 100%; /* Each link takes full width */
+        padding: 10px; /* Add padding for touch targets */
+        border-bottom: 1px solid #eee; /* Optional: adds a separator between links */
+    }
+}
 
   .box {
     width: 90%; /* Make boxes take more width */
