@@ -442,9 +442,9 @@ color: #13354b;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #fffff;
+    background-color: #ff6347;
     padding: 20px;
-    text-align: left;
+    text-align: center;
     display: none; /* Hidden by default */
 }
 
