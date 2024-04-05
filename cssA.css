@@ -442,16 +442,15 @@ color: #13354b;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #e2e2f4;
+    background-color: #fffff;
     padding: 20px;
     text-align: center;
     display: none; /* Hidden by default */
 }
 
 .cookie-image {
-    width: 50px;
+    width: 100px;
     height: auto;
-    background: transparent;
     margin-bottom: 10px;
 }
 
