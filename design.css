@@ -26,6 +26,13 @@ header {
   font-weight: bold;
 }
 
+.logo img {
+  max-width: 100%; /* Ensures the logo scales within its container */
+  height: auto; /* Keeps the logo's aspect ratio */
+  background-color: transparent; /* Makes the logo's background transparent */
+  /* Add more styling as needed */
+}
+
 nav ul {
   list-style: none;
 }
