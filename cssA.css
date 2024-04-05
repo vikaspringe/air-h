@@ -1,3 +1,26 @@
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Adjust the base font size for mobile */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.25em; /* Adjust heading sizes relative to the base size */
+    }
+
+    .nav__link, .contact, .footer__info p, .footer__social li a, .contact-info {
+        font-size: 13px; /* Smaller font sizes for navigation, footer, and contact info */
+    }
+
+    .box, .banner__content h1, .banner__content p {
+        font-size: 12px; /* Adjust box content and banner text for better readability */
+    }
+
+    .cookie-consent-container, .cookie-buttons button {
+        font-size: 12px; /* Ensure cookie consent and buttons are also adjusted */
+    }
+}
+
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
