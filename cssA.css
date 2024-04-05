@@ -8,7 +8,7 @@
         font-size: 1.25em; /* Adjust heading sizes relative to the base size */
     }
 
-    .nav__link, .contact, .footer__info p, .footer__social li a, .contact-info {
+    .nav__link, .contact, .footer__info p, .footer__social li a, .contact-info, title {
         font-size: 13px; /* Smaller font sizes for navigation, footer, and contact info */
     }
 
