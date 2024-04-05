@@ -12,7 +12,7 @@
         font-size: 13px; /* Smaller font sizes for navigation, footer, and contact info */
     }
 
-    .box, .banner__content h1, .banner__content p, .boxes .box {
+    .box, .banner__content h1, .banner__content p, .boxes .box, contact-section {
         font-size: 12px; /* Adjust box content, banner text, and box titles for better readability */
     }
 
