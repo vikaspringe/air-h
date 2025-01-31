@@ -5,105 +5,63 @@
   <link rel="stylesheet" href="cssA.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Air-H</title>
   <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Font and Body Styling */
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f9f9f9;
-      color: #333;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Header Styling */
     .header {
       background-color: #ffffff;
       padding: 10px 0;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    /* Navigation Styling */
     .nav {
       display: flex;
+      justify-content: center;
       gap: 20px;
-      flex-wrap: wrap; /* Ensure buttons wrap if screen width reduces */
     }
 
     .nav__link {
-      font-size: 18px;
-      color: white;
       text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      transition: transform 0.3s, box-shadow 0.3s;
+      color: #0072ff;
+      font-weight: 700;
+    }
+
+    .content-section {
       text-align: center;
+      margin: 40px 0;
     }
 
-    .nav__link:hover {
-      transform: scale(1.1);
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    .content-section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
-    /* Responsive Design with Media Queries */
-    @media (max-width: 992px) {
-      .nav {
-        justify-content: center; /* Center align buttons for smaller screens */
-      }
-
-      .nav__link {
-        font-size: 16px;
-        padding: 8px 16px; /* Slightly reduce padding */
-      }
+    .content-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    @media (max-width: 768px) {
-      .nav__link {
-        font-size: 14px;
-        padding: 6px 12px; /* Further reduce padding for smaller screens */
-      }
+    .content-section p {
+      margin-top: 15px;
+      font-size: 16px;
     }
 
-    @media (max-width: 576px) {
-      .nav {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center;
-      }
-
-      .nav__link {
-        width: 100%; /* Make buttons full width */
-        max-width: 300px;
-        font-size: 14px;
-        margin: 5px 0;
-      }
-    }
-
-    /* Footer Styling */
     .footer {
       background-color: #333;
       color: #fff;
-      padding: 20px 0;
       text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -116,18 +74,39 @@
         <a class="nav__link" href="air_recovery.html">AIR RECOVERY</a>
         <a class="nav__link" href="refrigerators.html">REFRIGERATORS</a>
         <a class="nav__link" href="heat_pumps.html">HEAT PUMPS</a>
-        <a class="nav__link" href="heating.html">HEATING</a>
-        <a class="nav__link" href="sewerage.html">SEWERAGE</a>
         <a class="nav__link" href="contact.html">CONTACT</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main Content Section -->
   <main>
-    <div class="container">
-      <h1>Welcome to Air-H</h1>
-      <p>Explore our products and services.</p>
+    <!-- Air Conditioners -->
+    <div class="content-section">
+      <h2>AIR CONDITIONERS</h2>
+      <img src="air_conditioners_image.png" alt="Air Conditioners">
+      <p>Keep your space cool with our high-performance air conditioners.</p>
+    </div>
+
+    <!-- Air Recovery -->
+    <div class="content-section">
+      <h2>AIR RECOVERY</h2>
+      <img src="air_recovery_image.png" alt="Air Recovery">
+      <p>Energy-efficient air recovery systems for optimal ventilation.</p>
+    </div>
+
+    <!-- Refrigerators -->
+    <div class="content-section">
+      <h2>REFRIGERATORS</h2>
+      <img src="refrigerators_image.png" alt="Refrigerators">
+      <p>Modern refrigerators designed to keep your food fresh.</p>
+    </div>
+
+    <!-- Heat Pumps -->
+    <div class="content-section">
+      <h2>HEAT PUMPS</h2>
+      <img src="heat_pumps_image.png" alt="Heat Pumps">
+      <p>Efficient heat pumps for year-round comfort.</p>
     </div>
   </main>
 
