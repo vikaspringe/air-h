@@ -37,6 +37,7 @@
     .nav {
       display: flex;
       gap: 20px;
+      margin-left: auto;
     }
 
     .nav__link {
@@ -46,7 +47,6 @@
     }
 
     .language-switcher {
-      margin-left: 20px;
       font-size: 14px;
     }
 
@@ -161,16 +161,36 @@
     <a href="https://www.siltumsuknis.lv/" target="_blank" class="button">Apmeklēt mūsu partneri</a>
     
     <div class="gallery">
-      <a href="#lightbox"><img src="photo1.jpg" alt="Darbs 1"></a>
-      <a href="#lightbox"><img src="photo2.jpg" alt="Darbs 2"></a>
-      <a href="#lightbox"><img src="photo3.jpg" alt="Darbs 3"></a>
-      <a href="#lightbox"><img src="photo4.jpg" alt="Darbs 4"></a>
-      <a href="#lightbox"><img src="photo5.jpg" alt="Darbs 5"></a>
-      <a href="#lightbox"><img src="photo6.jpg" alt="Darbs 6"></a>
-      <a href="#lightbox"><img src="photo7.jpg" alt="Darbs 7"></a>
-      <a href="#lightbox"><img src="photo8.jpg" alt="Darbs 8"></a>
-      <a href="#lightbox"><img src="photo9.jpg" alt="Darbs 9"></a>
+      <a href="#img1" id="img1"><img src="photo1.jpg" alt="Darbs 1"></a>
+      <a href="#img2" id="img2"><img src="photo2.jpg" alt="Darbs 2"></a>
+      <a href="#img3" id="img3"><img src="photo3.jpg" alt="Darbs 3"></a>
+      <a href="#img4" id="img4"><img src="photo4.jpg" alt="Darbs 4"></a>
+      <a href="#img5" id="img5"><img src="photo5.jpg" alt="Darbs 5"></a>
+      <a href="#img6" id="img6"><img src="photo6.jpg" alt="Darbs 6"></a>
+      <a href="#img7" id="img7"><img src="photo7.jpg" alt="Darbs 7"></a>
+      <a href="#img8" id="img8"><img src="photo8.jpg" alt="Darbs 8"></a>
+      <a href="#img9" id="img9"><img src="photo9.jpg" alt="Darbs 9"></a>
     </div>
+
+    <div id="lightbox" class="lightbox">
+      <img src="" id="lightbox-img" alt="">
+    </div>
+
+    <script>
+      document.querySelectorAll('.gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+          const lightbox = document.querySelector('#lightbox');
+          const lightboxImg = document.querySelector('#lightbox-img');
+          lightboxImg.src = img.src;
+          lightbox.style.display = 'flex';
+        });
+      });
+
+      document.querySelector('#lightbox').addEventListener('click', () => {
+        document.querySelector('#lightbox').style.display = 'none';
+      });
+    </script>
+
   </div>
 
   <footer class="footer">
