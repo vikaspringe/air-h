@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="cssA.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air-H</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #ffffff;
+      padding: 10px 0;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header__logo img {
+      max-height: 50px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #333; /* Neutral color for navigation links */
+      font-weight: 600;
+      margin-right: 20px;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+    }
+
+    .language-switcher {
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    /* Card Layout for Sections */
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin: 15px 0;
+      color: #444; /* Neutral gray color for titles */
+      text-transform: uppercase;
+    }
+
+    .card p {
+      padding: 10px 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="index_lv.html">
+          <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Uzņēmuma logo">
+        </a>
+      </div>
+      <nav class="nav">
+        <a class="nav__link" href="contact_lv.html">Kontakti</a>
+        <a class="nav__link language-switcher" href="index.html">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <div class="content-wrapper">
+      <!-- Air Conditioners -->
+      <div class="card">
+        <a href="air_conditioners_lv.html">
+          <img src="air_conditioners.png" alt="Kondicionieri">
+        </a>
+        <h2>Kondicionieri</h2>
+        <p>Nodrošiniet komfortu ar mūsu augstas veiktspējas kondicionieriem.</p>
+      </div>
+
+      <!-- Air Recovery -->
+      <div class="card">
+        <a href="air_recovery_lv.html">
+          <img src="air_recovery.png" alt="Gaisa atgūšana">
+        </a>
+        <h2>Gaisa atgūšana</h2>
+        <p>Efektīvas gaisa atgūšanas sistēmas optimālai ventilācijai.</p>
+      </div>
+
+      <!-- Refrigerators -->
+      <div class="card">
+        <a href="refrigerators_lv.html">
+          <img src="refrigerators.png" alt="Ledusskapji">
+        </a>
+        <h2>Ledusskapji</h2>
+        <p>Moderni ledusskapji, kas saglabā jūsu pārtiku svaigu.</p>
+      </div>
+
+      <!-- Heat Pumps -->
+      <div class="card">
+        <a href="heat_pumps_lv.html">
+          <img src="heat_pumps.png" alt="Siltumsūkņi">
+        </a>
+        <h2>Siltumsūkņi</h2>
+        <p>Efektīvi siltumsūkņi jūsu komfortam visa gada garumā.</p>
+      </div>
+
+      <!-- Heating -->
+      <div class="card">
+        <a href="heating_lv.html">
+          <img src="heating.png" alt="Apkure">
+        </a>
+        <h2>Apkure</h2>
+        <p>Modernas apkures sistēmas, kas uzturēs jūs siltumā.</p>
+      </div>
+
+      <!-- Sewerage -->
+      <div class="card">
+        <a href="sewerage_lv.html">
+          <img src="sewerage.png" alt="Kanalizācija">
+        </a>
+        <h2>Kanalizācija</h2>
+        <p>Efektīvi risinājumi tīrām un uzticamām kanalizācijas sistēmām.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</p>
+  </footer>
+</body>
+</html>
