@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Air-H</title>
   
-  <!-- Redirect to Latvian main page -->
+  <!-- JavaScript Redirect to Latvian Main Page -->
   <script>
-    window.location.href = "index_lv.html";
+    if (!localStorage.getItem("language") || localStorage.getItem("language") === "lv") {
+      window.location.href = "index_lv.html";
+    }
   </script>
 
   <link rel="stylesheet" href="cssA.css">
@@ -55,11 +57,6 @@
 
     .nav__link:hover {
       text-decoration: underline;
-    }
-
-    .language-switcher {
-      margin-left: 20px;
-      font-size: 14px;
     }
 
     /* Card Layout for Sections */
@@ -129,7 +126,7 @@
       </div>
       <nav class="nav">
         <a class="nav__link" href="contact.html">Contact</a>
-        <a class="nav__link language-switcher" href="index_lv.html">LAT</a>
+        <a class="nav__link language-switcher" href="index_lv.html" onclick="setLanguage('lv')">LAT</a>
       </nav>
     </div>
   </header>
@@ -197,5 +194,11 @@
   <footer class="footer">
     <p>&copy; 2025 Air-H. All rights reserved.</p>
   </footer>
+
+  <script>
+    function setLanguage(lang) {
+      localStorage.setItem("language", lang);
+    }
+  </script>
 </body>
 </html>
