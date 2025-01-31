@@ -46,28 +46,43 @@
       font-weight: 700;
     }
 
-    .content-section {
-      text-align: center;
-      margin: 40px 0;
+    /* Card Layout for Sections */
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .content-section h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .content-section img {
-      max-width: 100%;
-      width: 600px; /* Set uniform width */
-      height: 300px; /* Set uniform height */
-      object-fit: cover; /* Ensure image fits within the dimensions */
+    .card {
+      background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .content-section p {
-      margin-top: 15px;
-      font-size: 16px;
+    .card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover; /* Ensure image fits neatly */
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin: 15px 0;
+      color: #333;
+    }
+
+    .card p {
+      padding: 10px 20px;
+      font-size: 14px;
+      color: #555;
     }
 
     .footer {
@@ -103,32 +118,34 @@
 
   <!-- Main Content Section -->
   <main>
-    <!-- Air Conditioners -->
-    <div class="content-section">
-      <h2>AIR CONDITIONERS</h2>
-      <img src="air_conditioners.png" alt="Air Conditioners">
-      <p>Keep your space cool with our high-performance air conditioners.</p>
-    </div>
+    <div class="content-wrapper">
+      <!-- Air Conditioners -->
+      <div class="card">
+        <img src="air_conditioners.png" alt="Air Conditioners">
+        <h2>AIR CONDITIONERS</h2>
+        <p>Keep your space cool with our high-performance air conditioners.</p>
+      </div>
 
-    <!-- Air Recovery -->
-    <div class="content-section">
-      <h2>AIR RECOVERY</h2>
-      <img src="air_recovery.png" alt="Air Recovery">
-      <p>Energy-efficient air recovery systems for optimal ventilation.</p>
-    </div>
+      <!-- Air Recovery -->
+      <div class="card">
+        <img src="air_recovery.png" alt="Air Recovery">
+        <h2>AIR RECOVERY</h2>
+        <p>Energy-efficient air recovery systems for optimal ventilation.</p>
+      </div>
 
-    <!-- Refrigerators -->
-    <div class="content-section">
-      <h2>REFRIGERATORS</h2>
-      <img src="refrigerators.png" alt="Refrigerators">
-      <p>Modern refrigerators designed to keep your food fresh.</p>
-    </div>
+      <!-- Refrigerators -->
+      <div class="card">
+        <img src="refrigerators.png" alt="Refrigerators">
+        <h2>REFRIGERATORS</h2>
+        <p>Modern refrigerators designed to keep your food fresh.</p>
+      </div>
 
-    <!-- Heat Pumps -->
-    <div class="content-section">
-      <h2>HEAT PUMPS</h2>
-      <img src="heat_pumps.png" alt="Heat Pumps">
-      <p>Efficient heat pumps for year-round comfort.</p>
+      <!-- Heat Pumps -->
+      <div class="card">
+        <img src="heat_pumps.png" alt="Heat Pumps">
+        <h2>HEAT PUMPS</h2>
+        <p>Efficient heat pumps for year-round comfort.</p>
+      </div>
     </div>
   </main>
 
