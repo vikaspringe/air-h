@@ -2,94 +2,161 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel = "stylesheet" href = "cssA.css">
+  <link rel="stylesheet" href="cssA.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Kaushan+Script&family=Montserrat:wght@400;700&family=Permanent+Marker&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Air Conditioners</title>
+  <title>Air Conditioners - Air-H</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
 
+    .header {
+      background-color: #ffffff;
+      padding: 10px 0;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header__logo img {
+      max-height: 50px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #0072ff;
+      font-weight: 700;
+    }
+
+    .main-content {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .main-content h1 {
+      font-size: 32px;
+      color: #0072ff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .main-content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .features {
+      margin-top: 40px;
+    }
+
+    .features h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features ul li {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .back-link {
+      display: block;
+      margin: 20px auto;
+      text-align: center;
+      font-size: 16px;
+      color: #0072ff;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
-<header class = "header">
-  <div class = "container">
-    <div class = "header__inner">
-      <div class="header__logo">
-        <a class = "header__logo" href="index.html"><img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Company Logo"></a>
-      </div>
-        
-      <a class = "header__logo" href="index.html"> <span style="color: #00E0FF;">Air</span><span style="color: #1D4E6F;">-h</span></a>
-
-
-          <nav class = "nav">
-            <a class = "nav__link active" href="air_conditioners.html">AIR CONDITIONERS</a>
-            <a class = "nav__link" href="air_recovery.html">AIR RECOVERY</a>
-            <a class = "nav__link" href="refrigerators.html">REFRIGERATORS</a>
-            <a class = "nav__link" href="heat_pumps.html">HEAT PUMPS</a>
-            <a class = "nav__link contact" href="contact.html">Contact</a>
-          </nav>
-      </div>
-  </div>
-  
-</header>
 <body>
-  <div class="banner">
-    <div class="banner__content">
-      <h1>Air Conditioners</h1>
-      <p>Your destination for premium air conditioning solutions</p>
-    </div>
-  </div>
-
-  <div class = "workingW">
-    <p>Company that we are working with</p>
-  </div>
-
-  <div class="company-logos">
-    <div class="company-logo">
-      <img src="lg-logo-png-transparent.png" alt="LG Logo">
-    </div>
-    <div class="company-logo">
-      <img src="DAIKIN_logo.svg.png" alt="Daikin Logo">
-    </div>
-    <div class="company-logo">
-      <img src="Midea-logo.png" alt="Midea Logo">
-    </div>
-    <div class="company-logo">
-      <img src="Hisense-Logo.png" alt="Hisense Logo">
-    </div>
-    <div class="company-logo">
-      <img src="Mitsubishi_Electric_logo.svg.png" alt="Mitsubishi Electric Logo">
-    </div>
-  </div>
-  
- 
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__logo">
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="index.html">
           <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Company Logo">
-        </div>
-        <div class="footer__info">
-          <h3>Contact Information:</h3>
-          <p>Email: info@air-h.lv</p>
-          <p>Phone: +371 26777301</p>
-        </div>
-        <div class="footer__social">
-          <h3>Follow Us</h3>
-          <ul>
-            <li><a href="#"><img src="facebook-app-symbol.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="tik-tok (2).png" alt="TikTok"></a></li>
-            <li><a href="https://www.instagram.com/airhlv?igsh=MTQzZGN4NzdlYWo0eA=="><img src="instagram (2).png" alt="Instagram"></a></li>
-            <!-- Add more social media links as needed -->
-          </ul>
-        </div>
+        </a>
       </div>
+      <nav class="nav">
+        <a class="nav__link" href="index.html">Home</a>
+      </nav>
     </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <img src="air_conditioners.png" alt="Air Conditioners">
+    <h1>Air Conditioners</h1>
+    <p>
+      At Air-H, we offer state-of-the-art air conditioning solutions designed to provide comfort and energy efficiency for homes and businesses. Our air conditioners come equipped with the latest technology to ensure optimal cooling performance, low energy consumption, and silent operation.
+    </p>
+
+    <div class="features">
+      <h2>Key Features:</h2>
+      <ul>
+        <li>Energy-efficient cooling systems for reduced electricity bills.</li>
+        <li>Advanced filtration technology for cleaner air.</li>
+        <li>Quiet operation to maintain a peaceful environment.</li>
+        <li>Modern and sleek designs to complement any space.</li>
+        <li>Smart controls for easy temperature management.</li>
+      </ul>
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Air-H. All rights reserved.</p>
   </footer>
 </body>
-
-<script src="javaA.js"></script>
 </html>
