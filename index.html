@@ -6,15 +6,104 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-  <!-- Upgraded Font to Poppins (One of the Best & Most Elegant Fonts) -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Air-H</title>
   <style>
-    /* Apply the Poppins font to the whole site */
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Font and Body Styling */
     body {
       font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header Styling */
+    .header {
+      background-color: #ffffff;
+      padding: 10px 0;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Navigation Styling */
+    .nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap; /* Ensure buttons wrap if screen width reduces */
+    }
+
+    .nav__link {
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .nav__link:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive Design with Media Queries */
+    @media (max-width: 992px) {
+      .nav {
+        justify-content: center; /* Center align buttons for smaller screens */
+      }
+
+      .nav__link {
+        font-size: 16px;
+        padding: 8px 16px; /* Slightly reduce padding */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav__link {
+        font-size: 14px;
+        padding: 6px 12px; /* Further reduce padding for smaller screens */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .nav {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+      }
+
+      .nav__link {
+        width: 100%; /* Make buttons full width */
+        max-width: 300px;
+        font-size: 14px;
+        margin: 5px 0;
+      }
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
     }
   </style>
 </head>
@@ -22,85 +111,29 @@
   <!-- Header -->
   <header class="header">
     <div class="container">
-      <div class="header__inner">
-        <div class="header__logo">
-          <a class="header__logo" href="index.html">
-            <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Company Logo">
-          </a>
-        </div>
-          
-        <a class="header__logo" href="index.html">
-          <span style="color: #00E0FF;">Air</span><span style="color: #1D4E6F;">-h</span>
-        </a>
-  
-        <nav class="nav">
-          <a class="nav__link" href="air_conditioners.html">AIR CONDITIONERS</a>
-          <a class="nav__link" href="air_recovery.html">AIR RECOVERY</a>
-          <a class="nav__link" href="refrigerators.html">REFRIGERATORS</a>
-          <a class="nav__link" href="heat_pumps.html">HEAT PUMPS</a>
-          <a class="nav__link" href="heating.html">HEATING</a>  <!-- New Section -->
-          <a class="nav__link" href="sewerage.html">SEWERAGE</a>  <!-- New Section -->
-          <a class="nav__link contact" href="contact.html">Contact</a>
-        </nav>
-      </div>
+      <nav class="nav">
+        <a class="nav__link" href="air_conditioners.html">AIR CONDITIONERS</a>
+        <a class="nav__link" href="air_recovery.html">AIR RECOVERY</a>
+        <a class="nav__link" href="refrigerators.html">REFRIGERATORS</a>
+        <a class="nav__link" href="heat_pumps.html">HEAT PUMPS</a>
+        <a class="nav__link" href="heating.html">HEATING</a>
+        <a class="nav__link" href="sewerage.html">SEWERAGE</a>
+        <a class="nav__link" href="contact.html">CONTACT</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Main Boxes Section -->
-  <div class="boxes">
-    <a href="air_conditioners.html" class="box image-box">AIR CONDITIONERS</a>
-    <a href="air_recovery.html" class="box image-box4">AIR RECOVERY</a>
-    <a href="refrigerators.html" class="box image-box3">REFRIGERATORS</a>
-    <a href="heat_pumps.html" class="box image-box2">HEAT PUMPS</a>
-    <a href="heating.html" class="box image-box5">HEATING</a>  <!-- New Box -->
-    <a href="sewerage.html" class="box image-box6">SEWERAGE</a>  <!-- New Box -->
-  </div>
-
-  <!-- WhatsApp Blinking Logo -->
-  <div class="whatsapp-blinking-logo">
-    <a href="https://wa.me/37126777301" target="_blank">
-      <img src="whatsapp1.png" alt="Chat with us on WhatsApp">
-    </a>
-  </div>
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <h1>Welcome to Air-H</h1>
+      <p>Explore our products and services.</p>
+    </div>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__logo">
-          <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Company Logo">
-        </div>
-        <div class="footer__info">
-          <h3>Contact Information:</h3>
-          <p>Email: info@air-h.lv</p>
-          <p>Phone: +371 26777301</p>
-        </div>
-        <div class="footer__social">
-          <h3>Follow Us</h3>
-          <ul>
-            <li><a href="#"><img src="facebook-app-symbol.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="tik-tok (2).png" alt="TikTok"></a></li>
-            <li><a href="https://www.instagram.com/airhlv?igsh=MTQzZGN4NzdlYWo0eA==">
-              <img src="instagram (2).png" alt="Instagram"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Cookie Consent -->
-    <div id="cookieConsent" class="cookie-consent-container">
-      <img src="cookie.png" alt="Cookie" class="cookie-image">
-      <p>This site uses cookies to ensure you get the best experience! <a href="/cookie-policy.html">Learn More</a></p>
-      <div class="cookie-buttons">
-        <button onclick="setCookiePreferences('mandatory')">Mandatory Cookies</button>
-        <button onclick="setCookiePreferences('all')">Accept All Cookies</button>
-        <button onclick="setCookiePreferences('reject')" style="background-color: #d9534f; color: white;">Reject Cookies</button>
-      </div>
-    </div>
-
-    <script src="javaA.js"></script>
+    <p>&copy; 2025 Air-H. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
