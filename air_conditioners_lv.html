@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="cssA.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Air-H</title>
   <style>
@@ -41,32 +41,18 @@
 
     .nav__link {
       text-decoration: none;
-      color: #0072ff;
-      font-weight: 700;
+      color: #333;
+      font-weight: 600;
       margin-right: 20px;
     }
 
-    /* Running Text Animation */
-    .running-text-container {
-      width: 100%;
-      background-color: #0072ff;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 0;
-      overflow: hidden;
-      white-space: nowrap;
+    .nav__link:hover {
+      text-decoration: underline;
     }
 
-    .running-text {
-      display: inline-block;
-      animation: scrollText 12s linear infinite;
-      padding-left: 100%;
-    }
-
-    @keyframes scrollText {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+    .language-switcher {
+      margin-left: 20px;
+      font-size: 14px;
     }
 
     /* Card Layout for Sections */
@@ -105,17 +91,8 @@
     .card h2 {
       font-size: 20px;
       margin: 15px 0;
-      color: #0072ff;
+      color: #444;
       text-transform: uppercase;
-    }
-
-    .card h2 a {
-      text-decoration: none;
-      color: #0072ff;
-    }
-
-    .card h2 a:hover {
-      text-decoration: underline;
     }
 
     .card p {
@@ -134,27 +111,17 @@
   </style>
 </head>
 <body>
-
-  <!-- Running Title -->
-  <div class="running-text-container">
-    <div class="running-text">
-      🌟 Laipni lūdzam Air-H | Labākie risinājumi kondicionēšanai, apkurei un ventilācijai | Sazinieties ar mums! 🌟
-    </div>
-  </div>
-
   <!-- Header -->
   <header class="header">
     <div class="header__inner">
-      <!-- Company Logo -->
       <div class="header__logo">
-        <a href="index_lv.html">
+        <a href="air_conditioners_lv.html">
+          <!-- Redirect Logo to Air Conditioners Latvian Page -->
           <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Uzņēmuma logo">
         </a>
       </div>
-
-      <!-- Navigation (Language Switcher) -->
       <nav class="nav">
-        <a class="nav__link" href="contact_lv.html">KONTAKTI</a>
+        <a class="nav__link" href="contact_lv.html">Kontakti</a>
         <a class="nav__link language-switcher" href="index.html">EN</a>
       </nav>
     </div>
@@ -163,57 +130,57 @@
   <!-- Main Content Section -->
   <main>
     <div class="content-wrapper">
-      <!-- Air Conditioners -->
+      <!-- Kondicionieri -->
       <div class="card">
         <a href="air_conditioners_lv.html">
           <img src="air_conditioners.png" alt="Kondicionieri">
         </a>
-        <h2><a href="air_conditioners_lv.html">KONDICIONIERI</a></h2>
+        <h2>Kondicionieri</h2>
         <p>Nodrošiniet komfortu ar mūsu augstas veiktspējas kondicionieriem.</p>
       </div>
 
-      <!-- Air Recovery -->
+      <!-- Gaisa atgūšana -->
       <div class="card">
         <a href="air_recovery_lv.html">
           <img src="air_recovery.png" alt="Gaisa atgūšana">
         </a>
-        <h2><a href="air_recovery_lv.html">GAISA ATGŪŠANA</a></h2>
+        <h2>Gaisa atgūšana</h2>
         <p>Efektīvas gaisa atgūšanas sistēmas optimālai ventilācijai.</p>
       </div>
 
-      <!-- Refrigerators -->
+      <!-- Ledusskapji -->
       <div class="card">
         <a href="refrigerators_lv.html">
           <img src="refrigerators.png" alt="Ledusskapji">
         </a>
-        <h2><a href="refrigerators_lv.html">LEDUSSKAPJI</a></h2>
+        <h2>Ledusskapji</h2>
         <p>Moderni ledusskapji, kas saglabā jūsu pārtiku svaigu.</p>
       </div>
 
-      <!-- Heat Pumps -->
+      <!-- Siltumsūkņi -->
       <div class="card">
         <a href="heat_pumps_lv.html">
           <img src="heat_pumps.png" alt="Siltumsūkņi">
         </a>
-        <h2><a href="heat_pumps_lv.html">SILTUMSŪKŅI</a></h2>
+        <h2>Siltumsūkņi</h2>
         <p>Efektīvi siltumsūkņi jūsu komfortam visa gada garumā.</p>
       </div>
 
-      <!-- Heating -->
+      <!-- Apkure -->
       <div class="card">
         <a href="heating_lv.html">
           <img src="heating.png" alt="Apkure">
         </a>
-        <h2><a href="heating_lv.html">APKURE</a></h2>
+        <h2>Apkure</h2>
         <p>Modernas apkures sistēmas, kas uzturēs jūs siltumā.</p>
       </div>
 
-      <!-- Sewerage -->
+      <!-- Kanalizācija -->
       <div class="card">
         <a href="sewerage_lv.html">
           <img src="sewerage.png" alt="Kanalizācija">
         </a>
-        <h2><a href="sewerage_lv.html">KANALIZĀCIJA</a></h2>
+        <h2>Kanalizācija</h2>
         <p>Efektīvi risinājumi tīrām un uzticamām kanalizācijas sistēmām.</p>
       </div>
     </div>
@@ -221,4 +188,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</
+    <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</p>
+  </footer>
+</body>
+</html>
