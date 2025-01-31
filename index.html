@@ -22,6 +22,18 @@
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     }
 
+    .header__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header__logo img {
+      max-height: 50px;
+    }
+
     .nav {
       display: flex;
       justify-content: center;
@@ -68,7 +80,15 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="container">
+    <div class="header__inner">
+      <!-- Company Logo -->
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Company Logo">
+        </a>
+      </div>
+
+      <!-- Navigation -->
       <nav class="nav">
         <a class="nav__link" href="air_conditioners.html">AIR CONDITIONERS</a>
         <a class="nav__link" href="air_recovery.html">AIR RECOVERY</a>
@@ -84,28 +104,28 @@
     <!-- Air Conditioners -->
     <div class="content-section">
       <h2>AIR CONDITIONERS</h2>
-      <img src="air_conditioners_image.png" alt="Air Conditioners">
+      <img src="https://via.placeholder.com/800x400?text=Air+Conditioners" alt="Air Conditioners">
       <p>Keep your space cool with our high-performance air conditioners.</p>
     </div>
 
     <!-- Air Recovery -->
     <div class="content-section">
       <h2>AIR RECOVERY</h2>
-      <img src="air_recovery_image.png" alt="Air Recovery">
+      <img src="https://via.placeholder.com/800x400?text=Air+Recovery" alt="Air Recovery">
       <p>Energy-efficient air recovery systems for optimal ventilation.</p>
     </div>
 
     <!-- Refrigerators -->
     <div class="content-section">
       <h2>REFRIGERATORS</h2>
-      <img src="refrigerators_image.png" alt="Refrigerators">
+      <img src="https://via.placeholder.com/800x400?text=Refrigerators" alt="Refrigerators">
       <p>Modern refrigerators designed to keep your food fresh.</p>
     </div>
 
     <!-- Heat Pumps -->
     <div class="content-section">
       <h2>HEAT PUMPS</h2>
-      <img src="heat_pumps_image.png" alt="Heat Pumps">
+      <img src="https://via.placeholder.com/800x400?text=Heat+Pumps" alt="Heat Pumps">
       <p>Efficient heat pumps for year-round comfort.</p>
     </div>
   </main>
