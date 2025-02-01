@@ -1,16 +1,9 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Air-H | Contact</title>
-
-  <!-- JavaScript: Prevent Redirect Loop & Save Language Preference -->
-  <script>
-    if (localStorage.getItem("language") === "en") {
-      window.location.href = "index.html";
-    }
-  </script>
 
   <link rel="stylesheet" href="cssA.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,13 +96,12 @@
   <header class="header">
     <div class="header__inner">
       <div class="header__logo">
-        <a href="index_lv.html">
-          <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Uzņēmuma logo">
+        <a href="index.html">
+          <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Company Logo">
         </a>
       </div>
       <nav class="nav">
-        <a class="nav__link" href="contact_lv.html">Kontakti</a>
-        <a class="nav__link language-switcher" href="index.html" onclick="setLanguage('en')">EN</a>
+        <a class="nav__link" href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -131,13 +123,7 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</p>
+    <p>&copy; 2025 Air-H. All rights reserved.</p>
   </footer>
-
-  <script>
-    function setLanguage(lang) {
-      localStorage.setItem("language", lang);
-    }
-  </script>
 </body>
 </html>
