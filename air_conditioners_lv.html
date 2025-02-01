@@ -37,6 +37,7 @@
     .nav {
       display: flex;
       gap: 20px;
+      margin-left: auto;
     }
 
     .nav__link {
@@ -46,7 +47,6 @@
     }
 
     .language-switcher {
-      margin-left: 20px;
       font-size: 14px;
     }
 
@@ -106,6 +106,8 @@
 
     .gallery img {
       width: 100%;
+      height: 150px;
+      object-fit: cover;
       cursor: pointer;
       border-radius: 5px;
     }
@@ -125,6 +127,20 @@
     .lightbox img {
       max-width: 80%;
       max-height: 80%;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .contact-info {
+      font-size: 16px;
+      margin-top: 20px;
+      color: #333;
     }
   </style>
 </head>
@@ -146,12 +162,16 @@
   <div class="main-content">
     <h1>Kas ir kondicionieris?</h1>
     <p>
-      Kondicionieris ir ierīce, kas regulē telpas temperatūru un mitrumu, nodrošinot komfortu jebkuros laikapstākļos.
-      Mūsdienu modeļi piedāvā augstu energoefektivitāti, klusumu un uzlabotu gaisa kvalitāti.
+      Kondicionieris ir daudz vairāk nekā tikai ierīce, kas uztur vēsu temperatūru. 
+      Tas rūpējas par optimālu gaisa kvalitāti, enerģijas efektivitāti un komfortu, 
+      padarot jūsu telpas patīkamākas gan karstās vasaras dienās, gan aukstās ziemās.
     </p>
     
     <h2>Kur iegādāties kondicionieri?</h2>
-    <p>Mēs sadarbojamies ar uzticamiem partneriem, lai nodrošinātu augstas kvalitātes kondicionierus jūsu mājai vai birojam.</p>
+    <p>
+      Mēs sadarbojamies ar uzticamiem partneriem, lai nodrošinātu labākos kondicionēšanas risinājumus.
+      Atrodiet augstākās kvalitātes produktus un izvēlieties sev piemērotāko risinājumu mājai vai birojam.
+    </p>
     <a href="https://www.siltumsuknis.lv/" target="_blank" class="button">Apmeklēt mūsu partneri</a>
 
     <h2>Mūsu darbi</h2>
@@ -165,6 +185,10 @@
       <img src="photo7.jpg" onclick="openLightbox(this.src)">
       <img src="photo8.jpg" onclick="openLightbox(this.src)">
       <img src="photo9.jpg" onclick="openLightbox(this.src)">
+    </div>
+
+    <div class="contact-info">
+      <p>Zvani mums: <strong>+371 26777301</strong></p>
     </div>
   </div>
 
