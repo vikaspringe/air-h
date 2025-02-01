@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="cssA.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaisa atjaunošana - Air-H</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #eaeaea;
+      padding: 10px 20px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    .header__logo {
+      flex: 1;
+    }
+
+    .header__logo img {
+      max-height: 50px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .language-switcher {
+      font-size: 14px;
+    }
+
+    .contact-phone {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0072ff;
+      text-decoration: none;
+      flex: 1;
+      text-align: center;
+    }
+
+    .contact-phone:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .contact-phone {
+        margin-top: 10px;
+      }
+    }
+
+    .main-content {
+      max-width: 900px;
+      margin: 100px auto 40px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .main-content img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .main-content h1 {
+      font-size: 28px;
+      color: #333;
+      margin-top: 40px;
+      line-height: 1.2;
+    }
+
+    .main-content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <a href="index_lv.html">
+        <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Uzņēmuma logo">
+      </a>
+    </div>
+    <a href="tel:+3712677730" class="contact-phone">ZVANIET MUMS: +371 2677730</a>
+    <nav class="nav">
+      <a class="nav__link" href="index_lv.html">Sākums</a>
+      <a class="nav__link language-switcher" href="air_recovery_en.html">EN</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <h1>Kas ir gaisa atjaunošana?</h1>
+    <p>
+      Gaisa atjaunošanas sistēmas nodrošina svaiga gaisa cirkulāciju, vienlaikus saglabājot iekštelpu temperatūru un energoefektivitāti. 
+      Tās darbojas, atgūstot siltumu no izplūstošā gaisa un pārnesot to ienākošajam svaigajam gaisam, uzlabojot gaisa kvalitāti un samazinot enerģijas izmaksas.
+    </p>
+    
+    <h2>Kāpēc izvēlēties gaisa atjaunošanu?</h2>
+    <p>
+      Gaisa atjaunošanas sistēmas ir ideāli piemērotas veselīgas un komfortablas iekštelpu vides uzturēšanai. 
+      Tās novērš siltuma zudumus, samazina mitrumu un nodrošina pastāvīgu svaiga gaisa plūsmu, padarot tās par būtisku risinājumu gan mājām, gan birojiem.
+    </p>
+
+    <h2>Mūsu darbi</h2>
+    <div class="gallery">
+      <img src="project1.jpg" onclick="openLightbox(this.src)">
+      <img src="project2.jpg" onclick="openLightbox(this.src)">
+      <img src="project3.jpg" onclick="openLightbox(this.src)">
+      <img src="project4.jpg" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <div class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.querySelector(".lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.querySelector(".lightbox").style.display = "none";
+    }
+  </script>
+
+  <footer class="footer">
+    <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</p>
+  </footer>
+</body>
+</html>
