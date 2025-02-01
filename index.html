@@ -132,6 +132,51 @@
     .phone-link:hover {
       background-color: #0056b3;
     }
+
+    /* Cookie Banner */
+    .cookie-banner {
+      font-family: 'Poppins', sans-serif;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      z-index: 9999;
+    }
+
+    .cookie-banner h3 {
+      margin: 0 0 10px;
+    }
+
+    .cookie-banner p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .cookie-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn.accept {
+      background-color: #ff5722;
+      color: #fff;
+    }
+
+    .btn.manage {
+      background-color: #007bff;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -209,5 +254,19 @@
       <a href="tel:+37126777301" class="phone-link">Zvanīt: +371 26777301</a>
     </div>
   </footer>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner">
+    <h3>Mēs izmantojam sīkfailus</h3>
+    <p>
+      Mēs izmantojam sīkfailus, lai nodrošinātu mūsu vietnes darbību, pielāgotu saturu un reklāmas, 
+      kā arī nodrošinātu sociālo plašsaziņas līdzekļu funkcijas un analizētu mūsu datplūsmu.
+      <a href="#">Datu aizsardzības politika</a>
+    </p>
+    <div class="cookie-actions">
+      <button class="btn accept">Pieņemt</button>
+      <button class="btn manage">Pārvaldīt izvēles</button>
+    </div>
+  </div>
 </body>
 </html>
