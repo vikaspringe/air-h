@@ -18,17 +18,16 @@
 
     .header {
       background-color: #ffffff;
-      padding: 10px 0;
+      padding: 10px 20px;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
-
-    .header__inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     .header__logo img {
@@ -52,16 +51,15 @@
     }
 
     .contact-phone {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      margin-left: auto;
       font-size: 14px;
       color: #0072ff;
+      text-decoration: none;
     }
 
     .main-content {
       max-width: 900px;
-      margin: 60px auto 40px;
+      margin: 100px auto 40px;
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
@@ -150,18 +148,16 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__inner">
-      <div class="header__logo">
-        <a href="index_lv.html">
-          <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Uzņēmuma logo">
-        </a>
-      </div>
-      <a href="tel:+37126777301" class="contact-phone">+371 2677730</a>
-      <nav class="nav">
-        <a class="nav__link" href="index_lv.html">Sākums</a>
-        <a class="nav__link language-switcher" href="air_conditioners_en.html">EN</a>
-      </nav>
+    <div class="header__logo">
+      <a href="index_lv.html">
+        <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Uzņēmuma logo">
+      </a>
     </div>
+    <nav class="nav">
+      <a class="nav__link" href="index_lv.html">Sākums</a>
+      <a href="tel:+3712677730" class="contact-phone">+371 2677730</a>
+      <a class="nav__link language-switcher" href="air_conditioners_en.html">EN</a>
+    </nav>
   </header>
 
   <div class="main-content">
