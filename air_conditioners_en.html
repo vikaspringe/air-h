@@ -135,6 +135,38 @@
       background-color: #005bb5;
     }
 
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+
     .footer {
       background-color: #333;
       color: #fff;
@@ -174,17 +206,31 @@
 
     <h2>Our Work</h2>
     <div class="gallery">
-      <img src="photo1.jpg" alt="Work 1">
-      <img src="photo2.jpg" alt="Work 2">
-      <img src="photo3.jpg" alt="Work 3">
-      <img src="photo4.jpg" alt="Work 4">
-      <img src="photo5.jpg" alt="Work 5">
-      <img src="photo6.jpg" alt="Work 6">
-      <img src="photo7.jpg" alt="Work 7">
-      <img src="photo8.jpg" alt="Work 8">
-      <img src="photo9.jpg" alt="Work 9">
+      <img src="photo1.jpg" onclick="openLightbox(this.src)">
+      <img src="photo2.jpg" onclick="openLightbox(this.src)">
+      <img src="photo3.jpg" onclick="openLightbox(this.src)">
+      <img src="photo4.jpg" onclick="openLightbox(this.src)">
+      <img src="photo5.jpg" onclick="openLightbox(this.src)">
+      <img src="photo6.jpg" onclick="openLightbox(this.src)">
+      <img src="photo7.jpg" onclick="openLightbox(this.src)">
+      <img src="photo8.jpg" onclick="openLightbox(this.src)">
+      <img src="photo9.jpg" onclick="openLightbox(this.src)">
     </div>
   </div>
+
+  <div class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.querySelector(".lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.querySelector(".lightbox").style.display = "none";
+    }
+  </script>
 
   <footer class="footer">
     <p>&copy; 2025 Air-H. All rights reserved.</p>
