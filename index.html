@@ -78,6 +78,8 @@
       margin: 10% auto;
       padding: 20px;
       border-radius: 8px;
+      z-index: 1001;
+      position: relative;
     }
 
     #cookieModal h2 {
@@ -124,6 +126,11 @@
 
     #cookieModal button:hover {
       background-color: #0056b3;
+    }
+
+    /* Ensure body content remains accessible */
+    body.modal-open {
+      overflow: hidden;
     }
   </style>
 </head>
@@ -200,19 +207,20 @@
       const marketingCheckbox = document.getElementById('marketingCookies');
 
       // Show the modal every time the page loads
-      cookieModal.style.display = 'block';
+      document.body.classList.add('modal-open');
+      cookieModal.style.display = 'flex';
 
       // Accept all cookies
       acceptAllButton.addEventListener('click', function () {
         savePreferences({ statistics: true, marketing: true });
-        cookieModal.style.display = 'none';
+        closeModal();
         performAfterConsentActions();
       });
 
       // Reject all cookies
       rejectAllButton.addEventListener('click', function () {
         savePreferences({ statistics: false, marketing: false });
-        cookieModal.style.display = 'none';
+        closeModal();
         performAfterConsentActions();
       });
 
@@ -223,7 +231,7 @@
           marketing: marketingCheckbox.checked
         };
         savePreferences(preferences);
-        cookieModal.style.display = 'none';
+        closeModal();
         performAfterConsentActions();
       });
 
@@ -263,6 +271,11 @@
             console.log("Marketing tracking disabled.");
           }
         }
+      }
+
+      function closeModal() {
+        cookieModal.style.display = 'none';
+        document.body.classList.remove('modal-open');
       }
 
       loadPreferences();
