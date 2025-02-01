@@ -17,17 +17,22 @@
     }
 
     .header {
-      background-color: #ffffff;
-      padding: 10px 0;
+      background-color: #eaeaea;
+      padding: 10px 20px;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .header__inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    .header__logo {
+      flex: 1;
     }
 
     .header__logo img {
@@ -37,6 +42,9 @@
     .nav {
       display: flex;
       gap: 20px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
     }
 
     .nav__link {
@@ -46,13 +54,42 @@
     }
 
     .language-switcher {
-      margin-left: 20px;
       font-size: 14px;
+    }
+
+    .contact-phone {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0072ff;
+      text-decoration: none;
+      flex: 1;
+      text-align: center;
+    }
+
+    .contact-phone:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .contact-phone {
+        margin-top: 10px;
+      }
     }
 
     .main-content {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 100px auto 40px;
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
@@ -70,7 +107,8 @@
     .main-content h1 {
       font-size: 28px;
       color: #333;
-      margin-top: 20px;
+      margin-top: 40px;
+      line-height: 1.2;
     }
 
     .main-content p {
@@ -107,34 +145,47 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
-    <div class="header__inner">
-      <div class="header__logo">
-        <a href="index.html">
-          <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Company Logo">
-        </a>
-      </div>
-      <nav class="nav">
-        <a class="nav__link" href="index.html">Home</a>
-        <a class="nav__link language-switcher" href="air_conditioners_lv.html">LAT</a>
-      </nav>
+    <div class="header__logo">
+      <a href="index.html">
+        <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Company Logo">
+      </a>
     </div>
+    <a href="tel:+3712677730" class="contact-phone">CALL US: +371 2677730</a>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link language-switcher" href="air_conditioners_lv.html">LAT</a>
+    </nav>
   </header>
 
-  <!-- Main Content -->
   <div class="main-content">
-    <img src="air_conditioners.png" alt="Air Conditioners">
-    <h1>Air Conditioners</h1>
+    <h1>What is an Air Conditioner?</h1>
     <p>
-      Air-H is proud to partner with <strong>DAIKIN</strong>, a trusted global leader in air conditioning systems. Together, we ensure quality, efficiency, and comfort for your cooling needs.
+      An air conditioner is more than just a device that keeps your room cool. 
+      It ensures optimal air quality, energy efficiency, and comfort, making your spaces enjoyable in any season.
     </p>
-    <a href="https://www.siltumsuknis.lv/" target="_blank" class="button">
-      Visit Our Partner
-    </a>
+    
+    <h2>Where to Buy Air Conditioners?</h2>
+    <p>
+      We partner with the trusted provider <strong>Airwave</strong> to offer high-quality air conditioning solutions. 
+      Find the perfect product and enjoy comfort at home or in the office.
+    </p>
+    <a href="https://www.airwave.lv/" target="_blank" class="button">Visit Our Partner</a>
+
+    <h2>Our Work</h2>
+    <div class="gallery">
+      <img src="photo1.jpg" alt="Work 1">
+      <img src="photo2.jpg" alt="Work 2">
+      <img src="photo3.jpg" alt="Work 3">
+      <img src="photo4.jpg" alt="Work 4">
+      <img src="photo5.jpg" alt="Work 5">
+      <img src="photo6.jpg" alt="Work 6">
+      <img src="photo7.jpg" alt="Work 7">
+      <img src="photo8.jpg" alt="Work 8">
+      <img src="photo9.jpg" alt="Work 9">
+    </div>
   </div>
 
-  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Air-H. All rights reserved.</p>
   </footer>
