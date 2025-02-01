@@ -4,32 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Air-H</title>
-  <!-- Google tag (gtag.js) -->
+
+  <!-- Google Analytics (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGF7NXL56M"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-EGF7NXL56M');
   </script>
-  
-  <!-- JavaScript: Prevent Redirect Loop & Save Language Preference -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let lang = localStorage.getItem("language");
-
-    // Ensure that Latvian is always the default if no language is set
-    if (!lang) {
-      localStorage.setItem("language", "lv");
-    }
-
-    // Only redirect to English if the user has explicitly selected it before
-    if (lang === "en") {
-      window.location.href = "index.html";
-    }
-  });
-</script>
 
   <link rel="stylesheet" href="cssA.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,7 +61,6 @@
       text-decoration: underline;
     }
 
-    /* Card Layout for Sections */
     .content-wrapper {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -163,7 +145,6 @@
       </div>
       <nav class="nav">
         <a class="nav__link" href="contact_lv.html">Kontakti</a>
-        <a class="nav__link language-switcher" href="#" onclick="setLanguage('en'); return false;">EN</a>
       </nav>
     </div>
   </header>
@@ -171,7 +152,6 @@
   <!-- Main Content Section -->
   <main>
     <div class="content-wrapper">
-      <!-- Kondicionieri -->
       <div class="card">
         <a href="air_conditioners_lv.html">
           <img src="air_conditioners.png" alt="Kondicionieri">
@@ -180,7 +160,6 @@
         <p>Nodrošiniet komfortu ar mūsu augstas veiktspējas kondicionieriem.</p>
       </div>
 
-      <!-- Rekuperācijas sistēmas -->
       <div class="card">
         <a href="air_recovery_lv.html">
           <img src="air_recovery.png" alt="Gaisa atgūšana">
@@ -189,7 +168,6 @@
         <p>Efektīvas rekuperācijas sistēmas optimālai ventilācijai.</p>
       </div>
 
-      <!-- Ledusskapji -->
       <div class="card">
         <a href="refrigerators_lv.html">
           <img src="refrigerators.png" alt="Ledusskapji">
@@ -198,7 +176,6 @@
         <p>Moderni ledusskapji, kas saglabā jūsu pārtiku svaigu.</p>
       </div>
 
-      <!-- Siltumsūkņi -->
       <div class="card">
         <a href="heat_pumps_lv.html">
           <img src="heat_pumps.png" alt="Siltumsūkņi">
@@ -207,7 +184,6 @@
         <p>Efektīvi siltumsūkņi jūsu komfortam visa gada garumā.</p>
       </div>
 
-      <!-- Apkure -->
       <div class="card">
         <a href="heating_lv.html">
           <img src="heating.png" alt="Apkure">
@@ -216,7 +192,6 @@
         <p>Modernas apkures sistēmas, kas uzturēs jūs siltumā.</p>
       </div>
 
-      <!-- Kanalizācija -->
       <div class="card">
         <a href="sewerage_lv.html">
           <img src="sewerage.png" alt="Kanalizācija">
@@ -234,11 +209,5 @@
       <a href="tel:+37126777301" class="phone-link">Zvanīt: +371 26777301</a>
     </div>
   </footer>
-
-  <script>
-    function setLanguage(lang) {
-      localStorage.setItem("language", lang);
-    }
-  </script>
 </body>
 </html>
