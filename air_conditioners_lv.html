@@ -20,6 +20,7 @@
       background-color: #ffffff;
       padding: 10px 0;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
 
     .header__inner {
@@ -50,9 +51,17 @@
       font-size: 14px;
     }
 
+    .contact-phone {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      color: #0072ff;
+    }
+
     .main-content {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 60px auto 40px;
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
@@ -70,7 +79,8 @@
     .main-content h1 {
       font-size: 28px;
       color: #333;
-      margin-top: 20px;
+      margin-top: 40px;
+      line-height: 1.2;
     }
 
     .main-content p {
@@ -136,12 +146,6 @@
       padding: 20px 0;
       margin-top: 40px;
     }
-
-    .contact-info {
-      font-size: 16px;
-      margin-top: 20px;
-      color: #333;
-    }
   </style>
 </head>
 <body>
@@ -152,6 +156,7 @@
           <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Uzņēmuma logo">
         </a>
       </div>
+      <a href="tel:+37126777301" class="contact-phone">+371 2677730</a>
       <nav class="nav">
         <a class="nav__link" href="index_lv.html">Sākums</a>
         <a class="nav__link language-switcher" href="air_conditioners_en.html">EN</a>
@@ -185,10 +190,6 @@
       <img src="photo7.jpg" onclick="openLightbox(this.src)">
       <img src="photo8.jpg" onclick="openLightbox(this.src)">
       <img src="photo9.jpg" onclick="openLightbox(this.src)">
-    </div>
-
-    <div class="contact-info">
-      <p>Zvani mums: <strong>+371 26777301</strong></p>
     </div>
   </div>
 
