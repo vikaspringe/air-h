@@ -6,21 +6,23 @@
   <title>Air-H</title>
   
   <!-- JavaScript Redirect to Latvian Main Page -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let lang = localStorage.getItem("language");
-  
-      // If no language is set, default to English
-      if (!lang) {
-        localStorage.setItem("language", "en");
-      }
-  
-      // If the user has chosen Latvian, redirect to index_lv.html
-      if (lang === "lv") {
-        window.location.href = "index_lv.html";
-      }
-    });
-  </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let lang = localStorage.getItem("language");
+
+    // If no language is set, assume the user wants Latvian
+    if (!lang) {
+      localStorage.setItem("language", "lv");
+      window.location.href = "index_lv.html";
+    }
+
+    // Redirect to Latvian page if the user explicitly selected it
+    if (lang === "lv") {
+      window.location.href = "index_lv.html";
+    }
+  });
+</script>
+
 
   <link rel="stylesheet" href="cssA.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
