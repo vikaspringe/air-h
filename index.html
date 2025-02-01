@@ -132,6 +132,38 @@
     .phone-link:hover {
       background-color: #0056b3;
     }
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cookie-banner p {
+      margin: 0;
+      flex: 1;
+    }
+    .cookie-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .cookie-buttons button {
+      background: #007bff;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .cookie-buttons button:hover {
+      background: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -202,6 +234,36 @@
     </div>
   </main>
 
+    <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>Mēs izmantojam sīkdatnes, lai nodrošinātu labāku lietošanas pieredzi. Jūs varat piekrist visām sīkdatnēm vai pielāgot savas izvēles.</p>
+    <div class="cookie-buttons">
+      <button id="accept-cookies">Akceptēt</button>
+      <button id="reject-cookies">Noraidīt</button>
+      <button id="customize-cookies">Pielāgot</button>
+    </div>
+  </div>
+
+  <!-- Cookie Banner Script -->
+  <script>
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+      document.cookie = "cookiesAccepted=true; path=/; max-age=31536000";
+      document.getElementById('cookie-banner').style.display = 'none';
+    });
+
+    document.getElementById('reject-cookies').addEventListener('click', function() {
+      document.cookie = "cookiesAccepted=false; path=/; max-age=31536000";
+      document.getElementById('cookie-banner').style.display = 'none';
+    });
+
+    document.getElementById('customize-cookies').addEventListener('click', function() {
+      alert('Šeit varētu būt pielāgotu sīkdatņu iestatījumi.');
+    });
+
+    if (document.cookie.includes("cookiesAccepted=true") || document.cookie.includes("cookiesAccepted=false")) {
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  </script>
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</p>
