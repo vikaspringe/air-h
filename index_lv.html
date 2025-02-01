@@ -10,12 +10,12 @@
   document.addEventListener("DOMContentLoaded", function () {
     let lang = localStorage.getItem("language");
 
-    // If no language is set, default to Latvian
+    // Ensure that Latvian is always the default if no language is set
     if (!lang) {
       localStorage.setItem("language", "lv");
     }
 
-    // If the user has chosen English, redirect to index.html
+    // Only redirect to English if the user has explicitly selected it before
     if (lang === "en") {
       window.location.href = "index.html";
     }
