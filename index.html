@@ -234,7 +234,7 @@
     </div>
   </main>
 
-    <!-- Cookie Banner -->
+<!-- Cookie Banner -->
   <div id="cookie-banner" class="cookie-banner">
     <p>Mēs izmantojam sīkdatnes, lai nodrošinātu labāku lietošanas pieredzi. Jūs varat piekrist visām sīkdatnēm vai pielāgot savas izvēles.</p>
     <div class="cookie-buttons">
@@ -246,13 +246,34 @@
 
   <!-- Cookie Banner Script -->
   <script>
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + value + "; path=/" + expires;
+    }
+
+    function getCookie(name) {
+      let nameEQ = name + "=";
+      let ca = document.cookie.split(';');
+      for(let i=0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
     document.getElementById('accept-cookies').addEventListener('click', function() {
-      document.cookie = "cookiesAccepted=true; path=/; max-age=31536000";
+      setCookie("cookiesAccepted", "true", 365);
       document.getElementById('cookie-banner').style.display = 'none';
     });
 
     document.getElementById('reject-cookies').addEventListener('click', function() {
-      document.cookie = "cookiesAccepted=false; path=/; max-age=31536000";
+      setCookie("cookiesAccepted", "false", 365);
       document.getElementById('cookie-banner').style.display = 'none';
     });
 
@@ -260,9 +281,9 @@
       alert('Šeit varētu būt pielāgotu sīkdatņu iestatījumi.');
     });
 
-    if (document.cookie.includes("cookiesAccepted=true") || document.cookie.includes("cookiesAccepted=false")) {
-      document.getElementById('cookie-banner').style.display = 'none';
-    }
+    window.onload = function() {
+      document.getElementById('cookie-banner').style.display = 'flex';
+    };
   </script>
   <!-- Footer -->
   <footer class="footer">
