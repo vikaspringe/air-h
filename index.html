@@ -5,20 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Air-H</title>
 
-  <!-- Google Analytics (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGF7NXL56M"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-EGF7NXL56M');
-  </script>
-
   <link rel="stylesheet" href="cssA.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -61,51 +52,6 @@
       text-decoration: underline;
     }
 
-    .content-wrapper {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .card img {
-      max-width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card h2 {
-      font-size: 20px;
-      margin: 15px 0;
-      color: #444;
-      text-transform: uppercase;
-    }
-
-    .card p {
-      padding: 10px 20px;
-      font-size: 14px;
-      color: #555;
-    }
-
     .footer {
       background-color: #333;
       color: #fff;
@@ -114,68 +60,70 @@
       margin-top: 40px;
     }
 
-    .phone-container {
-      margin-top: 15px;
-    }
-
-    .phone-link {
-      display: inline-block;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .phone-link:hover {
-      background-color: #0056b3;
-    }
-
-    /* Cookie Banner */
-    .cookie-banner {
-      font-family: 'Poppins', sans-serif;
+    /* Cookie Modal Styles */
+    #cookieModal {
+      display: none;
       position: fixed;
-      bottom: 0;
+      top: 0;
       left: 0;
-      right: 0;
-      background-color: #fff;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    #cookieModalContent {
+      background: white;
+      max-width: 500px;
+      margin: 10% auto;
       padding: 20px;
-      z-index: 9999;
+      border-radius: 8px;
     }
 
-    .cookie-banner h3 {
-      margin: 0 0 10px;
+    #cookieModal h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
-    .cookie-banner p {
+    #cookieModal h3 {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    #cookieModal p {
       font-size: 14px;
-      line-height: 1.5;
+      margin-bottom: 20px;
     }
 
-    .cookie-actions {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
+    #cookieModal input[type="checkbox"] {
+      margin-right: 10px;
     }
 
-    .btn {
+    #cookieModal button {
+      cursor: pointer;
       padding: 10px 20px;
+      margin-right: 10px;
       border: none;
       border-radius: 5px;
-      cursor: pointer;
+      transition: background-color 0.3s;
     }
 
-    .btn.accept {
-      background-color: #ff5722;
-      color: #fff;
-    }
-
-    .btn.manage {
+    #cookieModal button#acceptAll {
       background-color: #007bff;
-      color: #fff;
+      color: white;
+    }
+
+    #cookieModal button#rejectAll {
+      background-color: #ccc;
+    }
+
+    #cookieModal button#saveChoices {
+      background-color: #007bff;
+      color: white;
+    }
+
+    #cookieModal button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
@@ -184,7 +132,7 @@
   <header class="header">
     <div class="header__inner">
       <div class="header__logo">
-        <a href="index.html">
+        <a href="index_lv.html">
           <img src="logo.png" alt="Uzņēmuma logo">
         </a>
       </div>
@@ -194,79 +142,132 @@
     </div>
   </header>
 
-  <!-- Main Content Section -->
+  <!-- Main Content -->
   <main>
-    <div class="content-wrapper">
-      <div class="card">
-        <a href="air_conditioners_lv.html">
-          <img src="air_conditioners.png" alt="Kondicionieri">
-        </a>
-        <h2>Kondicionieri</h2>
-        <p>Nodrošiniet komfortu ar mūsu augstas veiktspējas kondicionieriem.</p>
-      </div>
-
-      <div class="card">
-        <a href="air_recovery_lv.html">
-          <img src="air_recovery.png" alt="Gaisa atgūšana">
-        </a>
-        <h2>Rekuperācijas sistēmas</h2>
-        <p>Efektīvas rekuperācijas sistēmas optimālai ventilācijai.</p>
-      </div>
-
-      <div class="card">
-        <a href="refrigerators_lv.html">
-          <img src="refrigerators.png" alt="Ledusskapji">
-        </a>
-        <h2>Ledusskapji</h2>
-        <p>Moderni ledusskapji, kas saglabā jūsu pārtiku svaigu.</p>
-      </div>
-
-      <div class="card">
-        <a href="heat_pumps_lv.html">
-          <img src="heat_pumps.png" alt="Siltumsūkņi">
-        </a>
-        <h2>Siltumsūkņi</h2>
-        <p>Efektīvi siltumsūkņi jūsu komfortam visa gada garumā.</p>
-      </div>
-
-      <div class="card">
-        <a href="heating_lv.html">
-          <img src="heating.png" alt="Apkure">
-        </a>
-        <h2>Apkure</h2>
-        <p>Modernas apkures sistēmas, kas uzturēs jūs siltumā.</p>
-      </div>
-
-      <div class="card">
-        <a href="sewerage_lv.html">
-          <img src="sewerage.png" alt="Kanalizācija">
-        </a>
-        <h2>Kanalizācija</h2>
-        <p>Efektīvi risinājumi tīrām un uzticamām kanalizācijas sistēmām.</p>
-      </div>
-    </div>
+    <p>Your main content goes here...</p>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</p>
-    <div class="phone-container">
-      <a href="tel:+37126777301" class="phone-link">Zvanīt: +371 26777301</a>
-    </div>
   </footer>
 
-  <!-- Cookie Banner -->
-  <div class="cookie-banner">
-    <h3>Mēs izmantojam sīkfailus</h3>
-    <p>
-      Mēs izmantojam sīkfailus, lai nodrošinātu mūsu vietnes darbību, pielāgotu saturu un reklāmas, 
-      kā arī nodrošinātu sociālo plašsaziņas līdzekļu funkcijas un analizētu mūsu datplūsmu.
-      <a href="#">Datu aizsardzības politika</a>
-    </p>
-    <div class="cookie-actions">
-      <button class="btn accept">Pieņemt</button>
-      <button class="btn manage">Pārvaldīt izvēles</button>
+  <!-- Cookie Consent Modal -->
+  <div id="cookieModal">
+    <div id="cookieModalContent">
+      <h2>Pārvaldīt izvēles</h2>
+      <p>
+        Mēs izmantojam sīkfailus, lai nodrošinātu mūsu vietnes darbību, pielāgotu saturu un reklāmas,
+        kā arī nodrošinātu sociālo plašsaziņas līdzekļu funkcijas un analizētu mūsu datplūsmu.
+        <a href="#">Lasīt vairāk</a>
+      </p>
+
+      <!-- Functional Cookies -->
+      <div>
+        <h3>Funkcionālie</h3>
+        <p>Vienmēr ieslēgts</p>
+        <input type="checkbox" id="functionalCookies" disabled checked>
+      </div>
+
+      <!-- Statistics Cookies -->
+      <div>
+        <h3>Statistika</h3>
+        <input type="checkbox" id="statisticsCookies">
+      </div>
+
+      <!-- Marketing Cookies -->
+      <div>
+        <h3>Mārketings</h3>
+        <input type="checkbox" id="marketingCookies">
+      </div>
+
+      <div style="margin-top: 20px;">
+        <button id="acceptAll">Pieņemt</button>
+        <button id="rejectAll">Noraidīt</button>
+        <button id="saveChoices">Saglabāt izvēles</button>
+      </div>
     </div>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cookieModal = document.getElementById('cookieModal');
+      const acceptAllButton = document.getElementById('acceptAll');
+      const rejectAllButton = document.getElementById('rejectAll');
+      const saveChoicesButton = document.getElementById('saveChoices');
+
+      const statisticsCheckbox = document.getElementById('statisticsCookies');
+      const marketingCheckbox = document.getElementById('marketingCookies');
+
+      // Show the modal every time the page loads
+      cookieModal.style.display = 'block';
+
+      // Accept all cookies
+      acceptAllButton.addEventListener('click', function () {
+        savePreferences({ statistics: true, marketing: true });
+        cookieModal.style.display = 'none';
+        performAfterConsentActions();
+      });
+
+      // Reject all cookies
+      rejectAllButton.addEventListener('click', function () {
+        savePreferences({ statistics: false, marketing: false });
+        cookieModal.style.display = 'none';
+        performAfterConsentActions();
+      });
+
+      // Save user choices
+      saveChoicesButton.addEventListener('click', function () {
+        const preferences = {
+          statistics: statisticsCheckbox.checked,
+          marketing: marketingCheckbox.checked
+        };
+        savePreferences(preferences);
+        cookieModal.style.display = 'none';
+        performAfterConsentActions();
+      });
+
+      // Save preferences to localStorage
+      function savePreferences(preferences) {
+        localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+      }
+
+      // Load preferences and reflect them in the modal
+      function loadPreferences() {
+        const savedPreferences = JSON.parse(localStorage.getItem('cookiePreferences'));
+        if (savedPreferences) {
+          statisticsCheckbox.checked = savedPreferences.statistics;
+          marketingCheckbox.checked = savedPreferences.marketing;
+        } else {
+          // Default preferences
+          statisticsCheckbox.checked = false;
+          marketingCheckbox.checked = false;
+        }
+      }
+
+      // Perform actions based on user consent
+      function performAfterConsentActions() {
+        const preferences = JSON.parse(localStorage.getItem('cookiePreferences'));
+        if (preferences) {
+          if (preferences.statistics) {
+            console.log("Statistics tracking enabled.");
+            // Initialize statistics scripts here
+          } else {
+            console.log("Statistics tracking disabled.");
+          }
+
+          if (preferences.marketing) {
+            console.log("Marketing tracking enabled.");
+            // Initialize marketing scripts here
+          } else {
+            console.log("Marketing tracking disabled.");
+          }
+        }
+      }
+
+      loadPreferences();
+      performAfterConsentActions();
+    });
+  </script>
 </body>
 </html>
