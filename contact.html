@@ -1,84 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel = "stylesheet" href = "cssA.css">
+  <title>Air-H | Contact</title>
+
+  <!-- JavaScript: Prevent Redirect Loop & Save Language Preference -->
+  <script>
+    if (localStorage.getItem("language") === "en") {
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <link rel="stylesheet" href="cssA.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   
-  <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Kaushan+Script&family=Montserrat:wght@400;700&family=Permanent+Marker&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Air Recovery</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
 
+    .header {
+      background-color: #ffffff;
+      padding: 10px 0;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header__logo img {
+      max-height: 50px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      margin-right: 20px;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+    }
+
+    .contact-section {
+      text-align: center;
+      padding: 50px 20px;
+      background: white;
+      max-width: 800px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-section h1 {
+      font-size: 28px;
+      color: #1D4E6F;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .contact-info a {
+      color: #00E0FF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .whatsapp-chat-link img {
+      width: 50px;
+      margin-top: 10px;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
-<header class = "header">
-  <div class = "container">
-    <div class = "header__inner">
-      <div class="header__logo">
-        <a class = "header__logo" href="index.html"><img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Company Logo"></a>
-      </div>
-        
-      <a class = "header__logo" href="index.html"> <span style="color: #00E0FF;">Air</span><span style="color: #1D4E6F;">-h</span></a>
-
-
-          <nav class = "nav">
-            <a class = "nav__link" href="air_conditioners.html">AIR CONDITIONERS</a>
-            <a class = "nav__link" href="air_recovery.html">AIR RECOVERY</a>
-            <a class = "nav__link" href="refrigerators.html">REFRIGERATORS</a>
-            <a class = "nav__link" href="heat_pumps.html">HEAT PUMPS</a>
-            <a class = "nav__link contact" href="contact.html">Contact</a>
-          </nav>
-      </div>
-  </div>
-  
-</header>
 <body>
-  
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="index_lv.html">
+          <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Uzņēmuma logo">
+        </a>
+      </div>
+      <nav class="nav">
+        <a class="nav__link" href="contact_lv.html">Kontakti</a>
+        <a class="nav__link language-switcher" href="index.html" onclick="setLanguage('en')">EN</a>
+      </nav>
+    </div>
+  </header>
 
-
-
-  <div class="contact-section">
-    <h1>Contact Us</h1>
-    <p>Have questions? We would love to hear from you.</p>
-    <div class="contact-info">
-      <address>
+  <main>
+    <div class="contact-section">
+      <h1>Contact Us</h1>
+      <p>Have questions? We would love to hear from you.</p>
+      <div class="contact-info">
         <strong>Company Name:</strong> Air-H<br>
         <strong>Email:</strong> <a href="mailto:info@air-h.lv">info@air-h.lv</a><br>
         <strong>Phone:</strong> <a href="tel:+37126777301">+371 26777301</a><br>
-      </address>
-      <h1>Chat us:</h1>
-      <a href="https://wa.me/37126777301" class="whatsapp-chat-link">
-        <img src="whatsapp1.png" alt="Chat with us on WhatsApp">
-      </a>
-    </div>
-  </div>
- 
-  
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__logo">
-          <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Company Logo">
-        </div>
-        <div class="footer__info">
-          <h3>Contact Information:</h3>
-          <p>Email: info@air-h.lv</p>
-          <p>Phone: +371 26777301</p>
-        </div>
-        <div class="footer__social">
-          <h3>Follow Us</h3>
-          <ul>
-            <li><a href="#"><img src="facebook-app-symbol.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="tik-tok (2).png" alt="TikTok"></a></li>
-            <li><a href="https://www.instagram.com/airhlv?igsh=MTQzZGN4NzdlYWo0eA=="><img src="instagram (2).png" alt="Instagram"></a></li>
-            <!-- Add more social media links as needed -->
-          </ul>
-        </div>
+        <h2>Chat with us:</h2>
+        <a href="https://wa.me/37126777301" class="whatsapp-chat-link">
+          <img src="whatsapp1.png" alt="Chat with us on WhatsApp">
+        </a>
       </div>
     </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</p>
   </footer>
+
+  <script>
+    function setLanguage(lang) {
+      localStorage.setItem("language", lang);
+    }
+  </script>
 </body>
 </html>
