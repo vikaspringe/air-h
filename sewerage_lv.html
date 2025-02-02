@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santehnika un Kanalizācija - Air-H</title>
+
+  <link rel="stylesheet" href="cssA.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #eaeaea;
+      padding: 10px 20px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    .header__logo img {
+      max-height: 50px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .main-content {
+      max-width: 900px;
+      margin: 100px auto 40px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .main-content img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      filter: grayscale(100%);
+      transition: filter 0.4s ease-in-out;
+    }
+
+    .main-content img:hover {
+      filter: grayscale(0%);
+    }
+
+    .main-content h1 {
+      font-size: 28px;
+      color: #333;
+      margin-top: 40px;
+    }
+
+    .main-content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 5px;
+      filter: grayscale(100%);
+      transition: filter 0.4s ease-in-out;
+    }
+
+    .gallery img:hover {
+      filter: grayscale(0%);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .phone-container {
+      margin-top: 15px;
+    }
+
+    .phone-link {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .phone-link:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__logo">
+    <a href="index.html">
+      <img src="logo.png" alt="Uzņēmuma logo">
+    </a>
+  </div>
+  <nav class="nav">
+    <a class="nav__link" href="index.html">Sākums</a>
+  </nav>
+</header>
+
+<div class="main-content">
+  <h1>Santehnika un Kanalizācija</h1>
+  <p>
+    Mūsu kvalificētie santehniķi piedāvā pilnu pakalpojumu klāstu Rīgā un tās apkārtnē.
+    Mēs nodrošinām uzticamu un efektīvu darbu – sākot no jaunu iekārtu uzstādīšanas līdz cauruļu remontam un kanalizācijas risinājumiem.
+  </p>
+
+  <h2>Mūsu piedāvātie pakalpojumi</h2>
+  <p>
+    ✅ Santehnikas uzstādīšana (maisītāji, izlietnes, dušas kabīnes, tualetes podi, boileri) <br>
+    ✅ Cauruļvadu remonts un noplūžu novēršana <br>
+    ✅ Kanalizācijas uzstādīšana un tīrīšana <br>
+    ✅ Apkures sistēmu un radiatoru montāža <br>
+    ✅ Bioloģiskās kanalizācijas sistēmas un septiķi <br>
+  </p>
+
+<div class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<script>
+  function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.querySelector(".lightbox").style.display = "flex";
+  }
+  function closeLightbox() {
+    document.querySelector(".lightbox").style.display = "none";
+  }
+</script>
+
+  <footer class="footer">
+    <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</p>
+    <div class="phone-container">
+      <a href="tel:+3712677730" class="phone-link">Zvanīt: +371 2677730</a>
+    </div>
+  </footer>
+
+</body>
+</html>
