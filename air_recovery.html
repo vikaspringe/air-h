@@ -8,15 +8,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rekuperācijas sistēmas - Air-H</title>
-  <!-- Google Analytics -->
+<!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGF7NXL56M"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+  
     gtag('config', 'G-EGF7NXL56M');
   </script>
-
+  
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -40,6 +41,10 @@
       flex-wrap: wrap;
     }
 
+    .header__logo {
+      flex: 1;
+    }
+
     .header__logo img {
       max-height: 50px;
     }
@@ -58,6 +63,23 @@
       font-weight: 600;
     }
 
+    .language-switcher {
+      font-size: 14px;
+    }
+
+    .contact-phone {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0072ff;
+      text-decoration: none;
+      flex: 1;
+      text-align: center;
+    }
+
+    .contact-phone:hover {
+      text-decoration: underline;
+    }
+
     .main-content {
       max-width: 900px;
       margin: 100px auto 40px;
@@ -66,6 +88,13 @@
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
+    }
+
+    .main-content img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
     }
 
     .main-content h1 {
@@ -84,27 +113,19 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Two images per row */
+      grid-template-columns: repeat(2, 1fr);
       gap: 10px;
       margin-top: 20px;
     }
 
     .gallery img {
       width: 100%;
-      aspect-ratio: 1; /* Makes the images square */
+      height: 150px;
       object-fit: cover;
       cursor: pointer;
       border-radius: 5px;
-      transition: transform 0.3s ease, filter 0.3s ease;
-      filter: grayscale(100%);
     }
 
-    .gallery img:hover {
-      filter: grayscale(0%);
-      transform: scale(1.05); /* Slight zoom effect on hover */
-    }
-
-    /* Lightbox Styles */
     .lightbox {
       display: none;
       position: fixed;
@@ -115,17 +136,11 @@
       background: rgba(0, 0, 0, 0.8);
       justify-content: center;
       align-items: center;
-      z-index: 1000;
     }
 
     .lightbox img {
       max-width: 80%;
       max-height: 80%;
-      border-radius: 8px;
-    }
-
-    .lightbox:target {
-      display: flex; /* Display lightbox when targeted */
     }
 
     .footer {
@@ -134,6 +149,10 @@
       text-align: center;
       padding: 20px 0;
       margin-top: 40px;
+    }
+
+    .phone-container {
+      margin-top: 15px;
     }
 
     .phone-link {
@@ -155,8 +174,8 @@
 <body>
   <header class="header">
     <div class="header__logo">
-      <a href="index.html">
-        <img src="logo.png" alt="Uzņēmuma logo">
+      <a href="index_lv.html">
+        <img src="WhatsApp Image 2024-01-27 at 14.39.15 (1).png" alt="Uzņēmuma logo">
       </a>
     </div>
     <nav class="nav">
@@ -171,31 +190,38 @@
       Tās darbojas, atgūstot siltumu no izplūstošā gaisa un pārnesot to ienākošajam svaigajam gaisam, uzlabojot gaisa kvalitāti un samazinot enerģijas izmaksas.
     </p>
     
-    <div class="gallery">
-      <a href="#lightbox1"><img src="project1.jpg" alt="Project 1"></a>
-      <a href="#lightbox2"><img src="project2.jpg" alt="Project 2"></a>
-      <a href="#lightbox3"><img src="project3.jpg" alt="Project 3"></a>
-      <a href="#lightbox4"><img src="project4.jpg" alt="Project 4"></a>
-    </div>
+    <h2>Kāpēc izvēlēties rekuperācijas sistēmas?</h2>
+    <p>
+      Rekuperācijas sistēmas ir ideāli piemērotas veselīgas un komfortablas iekštelpu vides uzturēšanai. 
+      Tās novērš siltuma zudumus, samazina mitrumu un nodrošina pastāvīgu svaiga gaisa plūsmu, padarot tās par būtisku risinājumu gan mājām, gan birojiem.
+    </p>
 
-    <!-- Lightbox Modals -->
-    <div id="lightbox1" class="lightbox">
-      <a href="#"><img src="project1.jpg" alt="Project 1"></a>
-    </div>
-    <div id="lightbox2" class="lightbox">
-      <a href="#"><img src="project2.jpg" alt="Project 2"></a>
-    </div>
-    <div id="lightbox3" class="lightbox">
-      <a href="#"><img src="project3.jpg" alt="Project 3"></a>
-    </div>
-    <div id="lightbox4" class="lightbox">
-      <a href="#"><img src="project4.jpg" alt="Project 4"></a>
+    <h2>Mūsu darbi</h2>
+    <div class="gallery">
+      <img src="project1.jpg" onclick="openLightbox(this.src)">
+      <img src="project2.jpg" onclick="openLightbox(this.src)">
+      <img src="project3.jpg" onclick="openLightbox(this.src)">
+      <img src="project4.jpg" onclick="openLightbox(this.src)">
     </div>
   </div>
 
+  <div class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.querySelector(".lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.querySelector(".lightbox").style.display = "none";
+    }
+  </script>
+
   <footer class="footer">
     <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</p>
-    <div>
+    <div class="phone-container">
       <a href="tel:+3712677730" class="phone-link">Zvanīt: +371 2677730</a>
     </div>
   </footer>
