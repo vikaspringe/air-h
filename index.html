@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -17,7 +17,79 @@
       margin: 0;
       padding: 0;
     }
-    
+
+    .header {
+      background-color: #ffffff;
+      padding: 10px 0;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header__logo img {
+      max-height: 50px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      margin-right: 20px;
+    }
+
+    .nav__link:hover {
+      text-decoration: underline;
+    }
+
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    /* Cookie Banner */
     .cookie-banner {
       position: fixed;
       bottom: 0;
@@ -84,26 +156,58 @@
   </div>
 </header>
 
-<!-- Main Content -->
-<main>
-  <div class="content-wrapper">
-    <div class="card">
-      <a href="air_conditioners_lv.html">
-        <img src="air_conditioners.png" alt="Kondicionieri">
-      </a>
-      <h2>Kondicionieri</h2>
-      <p>Nodrošiniet komfortu ar mūsu augstas veiktspējas kondicionieriem.</p>
-    </div>
+  <!-- Main Content Section -->
+  <main>
+    <div class="content-wrapper">
+      <div class="card">
+        <a href="air_conditioners_lv.html">
+          <img src="air_conditioners.png" alt="Kondicionieri">
+        </a>
+        <h2>Kondicionieri</h2>
+        <p>Nodrošiniet komfortu ar mūsu augstas veiktspējas kondicionieriem.</p>
+      </div>
 
-    <div class="card">
-      <a href="air_recovery_lv.html">
-        <img src="air_recovery.png" alt="Gaisa atgūšana">
-      </a>
-      <h2>Rekuperācijas sistēmas</h2>
-      <p>Efektīvas rekuperācijas sistēmas optimālai ventilācijai.</p>
+      <div class="card">
+        <a href="air_recovery_lv.html">
+          <img src="air_recovery.png" alt="Gaisa atgūšana">
+        </a>
+        <h2>Rekuperācijas sistēmas</h2>
+        <p>Efektīvas rekuperācijas sistēmas optimālai ventilācijai.</p>
+      </div>
+
+      <div class="card">
+        <a href="refrigerators_lv.html">
+          <img src="refrigerators.png" alt="Ledusskapji">
+        </a>
+        <h2>Ledusskapji</h2>
+        <p>Moderni ledusskapji, kas saglabā jūsu pārtiku svaigu.</p>
+      </div>
+
+      <div class="card">
+        <a href="heat_pumps_lv.html">
+          <img src="heat_pumps.png" alt="Siltumsūkņi">
+        </a>
+        <h2>Siltumsūkņi</h2>
+        <p>Efektīvi siltumsūkņi jūsu komfortam visa gada garumā.</p>
+      </div>
+
+      <div class="card">
+        <a href="heating_lv.html">
+          <img src="heating.png" alt="Apkure">
+        </a>
+        <h2>Apkure</h2>
+        <p>Modernas apkures sistēmas, kas uzturēs jūs siltumā.</p>
+      </div>
+
+      <div class="card">
+        <a href="sewerage_lv.html">
+          <img src="sewerage.png" alt="Kanalizācija">
+        </a>
+        <h2>Kanalizācija</h2>
+        <p>Efektīvi risinājumi tīrām un uzticamām kanalizācijas sistēmām.</p>
+      </div>
     </div>
-  </div>
-</main>
+  </main>
 
 <!-- Cookie Banner -->
 <div id="cookie-banner" class="cookie-banner">
@@ -123,30 +227,10 @@
   </div>
 </div>
 
-<!-- Google Analytics (Only loads if user accepts analytics cookies) -->
+<!-- Cookie Banner Script -->
 <script>
-  function setCookie(name, value, days) {
-    let expires = "";
-    if (days) {
-      let date = new Date();
-      date.setTime(date.getTime() + (days*24*60*60*1000));
-      expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + value + "; path=/" + expires;
-  }
-
-  function getCookie(name) {
-    let nameEQ = name + "=";
-    let ca = document.cookie.split(';');
-    for(let i=0; i < ca.length; i++) {
-      let c = ca[i].trim();
-      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-  }
-
   function applyCookies() {
-    let analyticsAccepted = getCookie("analyticsCookies") === "true";
+    let analyticsAccepted = document.getElementById('analytics-cookies').checked;
     if (analyticsAccepted) {
       let script = document.createElement("script");
       script.src = "https://www.googletagmanager.com/gtag/js?id=G-EGF7NXL56M";
@@ -163,18 +247,16 @@
   }
 
   document.getElementById('accept-all').addEventListener('click', function() {
-    setCookie("cookiesAccepted", "true", 365);
-    setCookie("analyticsCookies", "true", 365);
-    setCookie("marketingCookies", "true", 365);
     document.getElementById('cookie-banner').style.display = 'none';
+    document.getElementById('analytics-cookies').checked = true;
+    document.getElementById('marketing-cookies').checked = true;
     applyCookies();
   });
 
   document.getElementById('reject-all').addEventListener('click', function() {
-    setCookie("cookiesAccepted", "false", 365);
-    setCookie("analyticsCookies", "false", 365);
-    setCookie("marketingCookies", "false", 365);
     document.getElementById('cookie-banner').style.display = 'none';
+    document.getElementById('analytics-cookies').checked = false;
+    document.getElementById('marketing-cookies').checked = false;
   });
 
   document.getElementById('customize').addEventListener('click', function() {
@@ -184,19 +266,12 @@
   });
 
   document.getElementById('save-selection').addEventListener('click', function() {
-    setCookie("analyticsCookies", document.getElementById('analytics-cookies').checked, 365);
-    setCookie("marketingCookies", document.getElementById('marketing-cookies').checked, 365);
     document.getElementById('cookie-banner').style.display = 'none';
     applyCookies();
   });
 
   window.onload = function() {
-    let cookiesAccepted = getCookie("cookiesAccepted");
-    if (cookiesAccepted === "true") {
-      applyCookies();
-    } else {
-      document.getElementById('cookie-banner').style.display = 'flex';
-    }
+    document.getElementById('cookie-banner').style.display = 'flex';
   };
 </script>
 
