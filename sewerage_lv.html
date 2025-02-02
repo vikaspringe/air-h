@@ -18,6 +18,7 @@
       padding: 0;
     }
 
+    /* HEADER */
     .header {
       background-color: #eaeaea;
       padding: 10px 20px;
@@ -39,21 +40,25 @@
 
     .nav {
       display: flex;
-      gap: 20px;
       align-items: center;
-      flex: 1;
-      justify-content: center;
+      margin-left: auto;
     }
 
     .nav__link {
       text-decoration: none;
       color: #333;
       font-weight: 600;
+      padding: 10px 20px;
     }
 
+    .nav__link:hover {
+      text-decoration: underline;
+    }
+
+    /* MAIN CONTENT */
     .main-content {
       max-width: 900px;
-      margin: 100px auto 40px;
+      margin: 120px auto 40px;
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
@@ -61,37 +66,37 @@
       text-align: center;
     }
 
-    .main-content img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 8px;
-      filter: grayscale(100%);
-      transition: filter 0.4s ease-in-out;
-    }
-
-    .main-content img:hover {
-      filter: grayscale(0%);
-    }
-
     .main-content h1 {
-      font-size: 28px;
+      font-size: 32px;
       color: #333;
-      margin-top: 40px;
+      margin-top: 20px;
     }
 
     .main-content p {
       font-size: 16px;
       color: #555;
-      line-height: 1.6;
+      line-height: 1.8;
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    .service-list {
+      text-align: left;
+      padding-left: 20px;
       margin-top: 20px;
+    }
+
+    .service-list li {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 10px;
     }
 
     .gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .gallery img {
@@ -108,6 +113,7 @@
       filter: grayscale(0%);
     }
 
+    /* LIGHTBOX */
     .lightbox {
       display: none;
       position: fixed;
@@ -125,6 +131,7 @@
       max-height: 80%;
     }
 
+    /* FOOTER */
     .footer {
       background-color: #333;
       color: #fff;
@@ -133,8 +140,14 @@
       margin-top: 40px;
     }
 
+    .footer p {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+    }
+
     .phone-container {
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     .phone-link {
@@ -151,6 +164,7 @@
     .phone-link:hover {
       background-color: #0056b3;
     }
+
   </style>
 </head>
 <body>
@@ -169,18 +183,18 @@
 <div class="main-content">
   <h1>Santehnika un Kanalizācija</h1>
   <p>
-    Mūsu kvalificētie santehniķi piedāvā pilnu pakalpojumu klāstu Rīgā un tās apkārtnē.
-    Mēs nodrošinām uzticamu un efektīvu darbu – sākot no jaunu iekārtu uzstādīšanas līdz cauruļu remontam un kanalizācijas risinājumiem.
+    Mēs piedāvājam profesionālus santehnikas un kanalizācijas pakalpojumus Rīgā un tās apkārtnē.  
+    Mūsu meistari nodrošina augstas kvalitātes risinājumus jebkurai mājai, dzīvoklim vai uzņēmumam.
   </p>
 
-  <h2>Mūsu piedāvātie pakalpojumi</h2>
-  <p>
-    ✅ Santehnikas uzstādīšana (maisītāji, izlietnes, dušas kabīnes, tualetes podi, boileri) <br>
-    ✅ Cauruļvadu remonts un noplūžu novēršana <br>
-    ✅ Kanalizācijas uzstādīšana un tīrīšana <br>
-    ✅ Apkures sistēmu un radiatoru montāža <br>
-    ✅ Bioloģiskās kanalizācijas sistēmas un septiķi <br>
-  </p>
+  <h2>Mūsu pakalpojumi</h2>
+  <ul class="service-list">
+    <li>✅ Jebkādas santehnikas uzstādīšana (maisītāji, izlietnes, dušas, boileri, tualetes podi)</li>
+    <li>✅ Cauruļvadu remonts un noplūžu novēršana</li>
+    <li>✅ Kanalizācijas uzstādīšana un tīrīšana</li>
+    <li>✅ Apkures sistēmu un radiatoru montāža</li>
+    <li>✅ Bioloģiskās kanalizācijas sistēmas un septiķi</li>
+  </ul>
 
 <div class="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img">
@@ -196,12 +210,12 @@
   }
 </script>
 
-  <footer class="footer">
-    <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</p>
-    <div class="phone-container">
-      <a href="tel:+3712677730" class="phone-link">Zvanīt: +371 2677730</a>
-    </div>
-  </footer>
+<footer class="footer">
+  <p>&copy; 2025 Air-H. Visas tiesības aizsargātas.</p>
+  <div class="phone-container">
+    <a href="tel:+37126777301" class="phone-link">Zvanīt: +371 26777301</a>
+  </div>
+</footer>
 
 </body>
 </html>
