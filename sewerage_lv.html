@@ -31,7 +31,6 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      flex-wrap: wrap;
     }
 
     .header__logo img {
@@ -89,6 +88,14 @@
       font-size: 18px;
       color: #555;
       margin-bottom: 10px;
+      list-style: none;
+    }
+
+    .service-list li:before {
+      content: "✅";
+      color: green;
+      font-size: 20px;
+      margin-right: 10px;
     }
 
     .gallery {
@@ -141,7 +148,7 @@
 
     .footer p {
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 400; /* Regular, not bold */
       color: #fff;
     }
 
@@ -187,11 +194,11 @@
 
   <h2>Mūsu pakalpojumi</h2>
   <ul class="service-list">
-    <li>✅ Jebkādas santehnikas uzstādīšana (maisītāji, izlietnes, dušas, boileri, tualetes podi)</li>
-    <li>✅ Cauruļvadu remonts un noplūžu novēršana</li>
-    <li>✅ Kanalizācijas uzstādīšana un tīrīšana</li>
-    <li>✅ Apkures sistēmu un radiatoru montāža</li>
-    <li>✅ Bioloģiskās kanalizācijas sistēmas un septiķi</li>
+    <li>Jebkādas santehnikas uzstādīšana (maisītāji, izlietnes, dušas, boileri, tualetes podi)</li>
+    <li>Cauruļvadu remonts un noplūžu novēršana</li>
+    <li>Kanalizācijas uzstādīšana un tīrīšana</li>
+    <li>Apkures sistēmu un radiatoru montāža</li>
+    <li>Bioloģiskās kanalizācijas sistēmas un septiķi</li>
   </ul>
 
 </div>
